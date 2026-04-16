@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAN | Membership</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap">
+</head>
+<body class="page-fade">
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="ICAN Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="nav-dropdown active-dropdown">
+                <button class="nav-dropbtn" type="button">Leadership</button>
+                <div class="nav-dropdown-content">
+                    <a href="membership.html" class="dropdown-active">Membership</a>
+                    <a href="members.html">Member Profiles</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="subpage-hero membership-hero">
+        <div class="subpage-overlay">
+            <p class="subpage-tag">Membership</p>
+            <h1>Joining and Participating in ICAN</h1>
+            <p class="subpage-text">
+                Learn who can join, how membership works, and what ICAN members gain and contribute.
+            </p>
+        </div>
+    </header>
+
+   
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="logo.png" alt="ICAN Logo">
+                <p>The global standard for international college access.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>icanaccessnetwork@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ICAN — International College Access Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach((element) => revealObserver.observe(element));
+    </script>
+</body>
+</html>
