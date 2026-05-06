@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAN | Member Profiles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap">
+</head>
+<body class="page-fade">
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="ICAN Logo">
+            </a>
+        </div>
+ 
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="nav-dropdown active-dropdown">
+                <button class="nav-dropbtn" type="button">Leadership</button>
+                <div class="nav-dropdown-content">
+                    <a href="membership.html">Membership</a>
+                    <a href="members.html" class="dropdown-active">Member Profiles</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+ 
+    <header class="members-hero">
+        <div class="members-hero-overlay">
+            <p class="subpage-tag">ICAN Members</p>
+            <h1>Member Profiles</h1>
+            <p class="members-hero-text">
+                Explore our featured organizations working to expand access to global higher education.
+            </p>
+        </div>
+    </header>
+ 
+    <main class="profiles-page">
+        <section class="profiles-intro reveal">
+            <p class="section-tag">Overview</p>
+            <h2 class="section-title">Organizations expanding access to global higher education</h2>
+            <p>
+                ICAN members are united by a commitment to helping talented students from low-resource backgrounds access international university opportunities. Each organization brings its own regional expertise, advising model, and student support approach.
+            </p>
+        </section>
+ 
+        <section class="filter-section filter-simple reveal">
+            <label for="regionFilter" class="filter-label">Filter by region:</label>
+            <select id="regionFilter" class="region-select">
+                <option value="all">All Network Members</option>
+                <option value="africa">Africa</option>
+                <option value="latin-america">Latin America</option>
+                <option value="global">Global</option>
+            </select>
+        </section>
+ 
+        <section class="member-simple-list reveal">
+            <article class="member-simple-card" data-region="africa">
+                <div class="member-profile-top">
+                    <div class="member-profile-logo">
+                        <img src="member1.png" alt="KenSAP">
+                    </div>
+                    <div class="member-profile-copy">
+                        <p class="member-region">Africa</p>
+                        <h3>KenSAP</h3>
+                    </div>
+                </div>
+ 
+                <div class="member-info member-info-spaced">
+                    <p><strong>About:</strong> KenSAP provides access to world-class higher education for gifted, needy Kenyan high school graduates who would otherwise have no chance to pursue such an opportunity. Most of KenSAP students come from simple, rural backgrounds that would be utterly unrecognizable to their North American classmates, and many are from families that even by Kenyan standards count as disadvantaged.</p>
+ 
+                    <p><strong>Selection process and support:</strong> KenSAP selects its students, 15 to 20 each year, through a lengthy, rigorous process that considers their academic attainments, family background, extra-curricular accomplishments, and other personal qualities. The selected students then take part in 15 weeks of residential training consisting mainly of preparation for the American SAT exams and guidance through the complex university application process. The training also includes a general orientation to American culture and the unfamiliar academic conventions of American universities.</p>
+                </div>
+ 
+                <div class="member-contact">
+                    <div class="member-contact-links">
+                        <a href="https://www.kensap.org" target="_blank" rel="noreferrer" class="member-contact-item">
+                            <img src="website.png" alt="Website" class="contact-icon">
+                            <span>www.kensap.org</span>
+                        </a>
+                        <a href="mailto:alan@kensap.org" class="member-contact-item">
+                            <img src="email.png" alt="Email" class="contact-icon">
+                            <span>alan@kensap.org</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+ 
+            <article class="member-simple-card" data-region="latin-america">
+                <div class="member-profile-top">
+                    <div class="member-profile-logo">
+                        <img src="member2.png" alt="Beca Cometa">
+                    </div>
+                    <div class="member-profile-copy">
+                        <p class="member-region">Latin America</p>
+                        <h3>Beca Cometa</h3>
+                    </div>
+                </div>
+ 
+                <div class="member-info member-info-spaced">
+                    <p><strong>About:</strong> Beca Cometa is an initiative by the Intercorp Group that aims to expand access to high-quality higher education for talented Peruvian students from low-income backgrounds. The program focuses on supporting students with strong academic performance and leadership potential, helping them pursue undergraduate studies in the United States. By investing in education, Beca Cometa seeks to contribute to the long-term development of Peru and improve opportunities for future generations.</p>
+ 
+                    <p><strong>Selection process and support:</strong> Beca Cometa follows a highly selective, multi-stage admissions process that evaluates applicants based on academic achievement, English proficiency, socioeconomic background, and personal competencies. The process includes psychological, socioeconomic, and academic evaluations across five elimination phases. Around 60 students are selected for Beca Cometa Camp, an intensive preparation program that provides SAT training, English certification support, college application guidance, essay advising, and emotional counseling. Successful participants may then receive the full Beca Cometa, which funds tuition, living expenses, travel, and other essential costs for undergraduate studies in the U.S.</p>
+                </div>
+ 
+                <div class="member-contact">
+                    <div class="member-contact-links">
+                        <a href="https://somoscometa.com/becacometa/" target="_blank" rel="noreferrer" class="member-contact-item">
+                            <img src="website.png" alt="Website" class="contact-icon">
+                            <span>https://somoscometa.com/becacometa/</span>
+                        </a>
+                        <a href="mailto:becas@somoscometa.com" class="member-contact-item">
+                            <img src="email.png" alt="Email" class="contact-icon">
+                            <span>becas@somoscometa.com</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+ 
+            <article class="member-simple-card" data-region="global">
+                <div class="member-profile-top">
+                    <div class="member-profile-logo">
+                        <img src="member3.png" alt="Duolingo University Access Program">
+                    </div>
+                    <div class="member-profile-copy">
+                        <p class="member-region">Global</p>
+                        <h3>Duolingo University Access Program</h3>
+                    </div>
+                </div>
+ 
+                <div class="member-info member-info-spaced">
+                    <p><strong>About:</strong> The Duolingo University Access (DUA) Program, created in partnership with Duolingo and UNHCR, aims to expand access to higher education for refugee students worldwide. The program addresses the global gap in educational access, where only a small percentage of refugees are able to attend university, by providing structured pathways to top institutions. Through its efforts, DUA supports the broader goal of increasing refugee enrollment in higher education and creating more equitable academic opportunities across countries.</p>
+ 
+                    <p><strong>Selection process and support:</strong> The program identifies high-potential refugee students and provides individualized, comprehensive support throughout the entire university application journey. This includes one-on-one advising, assistance with financial aid applications, English testing through the Duolingo English Test, and guidance through complex immigration and visa processes. Students benefit from a wrap-around support model, which also includes interview preparation, transition support, and funding assistance when needed. The program works closely with UNHCR offices and operates in multiple regions, supporting students who go on to enroll in universities across the United States, Canada, and other countries.</p>
+                </div>
+ 
+                <div class="member-contact">
+                    <div class="member-contact-links">
+                        <a href="https://www.duolingo.com" target="_blank" rel="noreferrer" class="member-contact-item">
+                            <img src="website.png" alt="Website" class="contact-icon">
+                            <span>www.duolingo.com</span>
+                        </a>
+                        <a href="mailto:university-access@duolingo.com" class="member-contact-item">
+                            <img src="email.png" alt="Email" class="contact-icon">
+                            <span>university-access@duolingo.com</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+ 
+     <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="logo.png" alt="ICAN Logo">
+                <p>The global standard for international college access.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>icanaccessnetwork@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ICAN — International College Access Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach((element) => revealObserver.observe(element));
+    </script>
+ 
+    <script>
+        const regionFilter = document.getElementById('regionFilter');
+        const memberCards = document.querySelectorAll('.member-simple-card');
+ 
+        regionFilter.addEventListener('change', () => {
+            const selectedFilter = regionFilter.value;
+ 
+            memberCards.forEach((card) => {
+                const cardRegion = card.dataset.region;
+                if (selectedFilter === 'all' || cardRegion === selectedFilter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+ 
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.15 });
+ 
+        revealElements.forEach((element) => revealObserver.observe(element));
+    </script>
+</body>
+</html>
