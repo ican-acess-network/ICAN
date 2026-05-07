@@ -14,150 +14,312 @@
                 <img src="logo.png" alt="ICAN Logo">
             </a>
         </div>
- 
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li class="nav-dropdown active-dropdown">
-                <button class="nav-dropbtn" type="button">Leadership</button>
-                <div class="nav-dropdown-content">
-                    <a href="membership.html">Membership</a>
-                    <a href="members.html" class="dropdown-active">Member Profiles</a>
-                </div>
-            </li>
+            <li><a href="members.html">Members</a></li>
         </ul>
     </nav>
  
     <header class="members-hero">
         <div class="members-hero-overlay">
-            <p class="subpage-tag">ICAN Members</p>
-            <h1>Member Profiles</h1>
+            <h1>Members</h1>
             <p class="members-hero-text">
                 Explore our featured organizations working to expand access to global higher education.
             </p>
         </div>
     </header>
  
-    <main class="profiles-page">
-        <section class="profiles-intro reveal">
-            <p class="section-tag">Overview</p>
-            <h2 class="section-title">Organizations expanding access to global higher education</h2>
-            <p>
-                ICAN members are united by a commitment to helping talented students from low-resource backgrounds access international university opportunities. Each organization brings its own regional expertise, advising model, and student support approach.
-            </p>
+    <main>
+        <!-- Member Profiles -->
+        <section class="profiles-page" id="members">
+            <div class="profiles-intro reveal">
+                <h2 class="section-title">A network of organizations that support global talent seeking higher education opportunities.</h2>
+                <p>ICAN members are united by a commitment to helping talented students from low-resource backgrounds access international university opportunities. Each organization brings its own regional expertise, advising model, and student support approach.</p>
+            </div>
+
+            <div class="member-simple-list">
+
+                <!-- ── KenSAP ── -->
+                <article class="member-simple-card reveal">
+
+                    <div class="member-card-top">
+                        <div class="member-profile-logo">
+                            <img src="member1.png" alt="KenSAP">
+                        </div>
+                        <div class="member-header-copy">
+                            <span class="member-region-badge">Africa</span>
+                            <h3>KenSAP</h3>
+                        </div>
+                    </div>
+
+                    <div class="member-stats-strip">
+                        <div class="member-stat-block">
+                            <span class="msb-num">338</span>
+                            <span class="msb-lbl">Scholars</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">237</span>
+                            <span class="msb-lbl">Alumni</span>
+                        </div>
+                    </div>
+
+                    <div class="member-info-grid">
+                        <div class="mig-block mig-full">
+                            <p class="mig-label">About</p>
+                            <p class="mig-text">KenSAP provides access to world-class higher education for gifted, needy Kenyan high school graduates who would otherwise have no chance to pursue such an opportunity. Most of KenSAP students come from simple, rural backgrounds that would be utterly unrecognizable to their North American classmates, and many are from families that even by Kenyan standards count as disadvantaged.</p>
+                        </div>
+                        <div class="mig-block">
+                            <p class="mig-label">Selection &amp; Support</p>
+                            <p class="mig-text">KenSAP selects its students — 15 to 20 each year — through a lengthy, rigorous process that considers their academic attainments, family background, extra-curricular accomplishments and other personal qualities. The selected students then take part in 15 weeks of residential training consisting mainly of preparation for the American SAT exams and guidance through the complex university application process. The training also includes a general orientation to American culture and the unfamiliar academic conventions of American universities.</p>
+                        </div>
+                    </div>
+
+                    <div class="member-placements">
+                        <div class="placements-header">
+                            <p class="placements-label">University Placements</p>
+                            <div class="uni-nav-btns">
+                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                            </div>
+                        </div>
+                        <div class="uni-track-wrap">
+                            <div class="uni-track">
+                                <div class="uni-logo-item" title="Amherst College"><img src="amherst.png" alt="Amherst College"></div>
+                                <div class="uni-logo-item" title="Barnard College"><img src="barnard.png" alt="Barnard College"></div>
+                                <div class="uni-logo-item" title="Bates College"><img src="bates.png" alt="Bates College"></div>
+                                <div class="uni-logo-item" title="Bowdoin College"><img src="bowdoin.png" alt="Bowdoin College"></div>
+                                <div class="uni-logo-item" title="Brandeis University"><img src="brandeis.png" alt="Brandeis University"></div>
+                                <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
+                                <div class="uni-logo-item" title="Bryn Mawr College"><img src="brynmawr.png" alt="Bryn Mawr College"></div>
+                                <div class="uni-logo-item" title="Carleton College"><img src="carleton.png" alt="Carleton College"></div>
+                                <div class="uni-logo-item" title="Claremont McKenna College"><img src="cmc.png" alt="Claremont McKenna College"></div>
+                                <div class="uni-logo-item" title="Colby College"><img src="colby.png" alt="Colby College"></div>
+                                <div class="uni-logo-item" title="Columbia University"><img src="columbia.png" alt="Columbia University"></div>
+                                <div class="uni-logo-item" title="Connecticut College"><img src="connecticut.png" alt="Connecticut College"></div>
+                                <div class="uni-logo-item" title="Cornell University"><img src="cornell.png" alt="Cornell University"></div>
+                                <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                <div class="uni-logo-item" title="Davidson College"><img src="davidson.png" alt="Davidson College"></div>
+                                <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
+                                <div class="uni-logo-item" title="Gettysburg College"><img src="gettysburg.png" alt="Gettysburg College"></div>
+                                <div class="uni-logo-item" title="Hamilton College"><img src="hamilton.png" alt="Hamilton College"></div>
+                                <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
+                                <div class="uni-logo-item" title="Haverford College"><img src="haverford.png" alt="Haverford College"></div>
+                                <div class="uni-logo-item" title="Johns Hopkins University"><img src="jhu.png" alt="Johns Hopkins University"></div>
+                                <div class="uni-logo-item" title="Kenyon College"><img src="kenyon.png" alt="Kenyon College"></div>
+                                <div class="uni-logo-item" title="Lehigh University"><img src="lehigh.png" alt="Lehigh University"></div>
+                                <div class="uni-logo-item" title="McGill University"><img src="mcgill.png" alt="McGill University"></div>
+                                <div class="uni-logo-item" title="Middlebury College"><img src="middlebury.png" alt="Middlebury College"></div>
+                                <div class="uni-logo-item" title="MIT"><img src="mit.png" alt="MIT"></div>
+                                <div class="uni-logo-item" title="Mount Holyoke College"><img src="mountholyoke.png" alt="Mount Holyoke College"></div>
+                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                <div class="uni-logo-item" title="NYU"><img src="nyu.png" alt="NYU"></div>
+                                <div class="uni-logo-item" title="Oberlin College"><img src="oberlin.png" alt="Oberlin College"></div>
+                                <div class="uni-logo-item" title="Pomona College"><img src="pomona.png" alt="Pomona College"></div>
+                                <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
+                                <div class="uni-logo-item" title="Rice University"><img src="rice.png" alt="Rice University"></div>
+                                <div class="uni-logo-item" title="Smith College"><img src="smith.png" alt="Smith College"></div>
+                                <div class="uni-logo-item" title="Stanford University"><img src="stanford.png" alt="Stanford University"></div>
+                                <div class="uni-logo-item" title="Swarthmore College"><img src="swarthmore.png" alt="Swarthmore College"></div>
+                                <div class="uni-logo-item" title="Tufts University"><img src="tufts.png" alt="Tufts University"></div>
+                                <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
+                                <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
+                                <div class="uni-logo-item" title="University of Toronto"><img src="utoronto.png" alt="University of Toronto"></div>
+                                <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
+                                <div class="uni-logo-item" title="Vassar College"><img src="vassar.png" alt="Vassar College"></div>
+                                <div class="uni-logo-item" title="Wellesley College"><img src="wellesley.png" alt="Wellesley College"></div>
+                                <div class="uni-logo-item" title="Wesleyan University"><img src="wesleyan.png" alt="Wesleyan University"></div>
+                                <div class="uni-logo-item" title="Williams College"><img src="williams.png" alt="Williams College"></div>
+                                <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-contact">
+                        <div class="member-contact-links">
+                            <a href="https://www.kensap.org" target="_blank" rel="noreferrer" class="member-contact-item">
+                                <img src="website.png" alt="Website" class="contact-icon">
+                                <span>www.kensap.org</span>
+                            </a>
+                            <a href="mailto:alan@kensap.org" class="member-contact-item">
+                                <img src="email.png" alt="Email" class="contact-icon">
+                                <span>alan@kensap.org</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Beca Cometa ── -->
+                <article class="member-simple-card reveal">
+
+                    <div class="member-card-top">
+                        <div class="member-profile-logo">
+                            <img src="member2.png" alt="Beca Cometa">
+                        </div>
+                        <div class="member-header-copy">
+                            <span class="member-region-badge">Latin America</span>
+                            <h3>Beca Cometa</h3>
+                        </div>
+                    </div>
+
+                    <div class="member-stats-strip">
+                        <div class="member-stat-block">
+                            <span class="msb-num">107</span>
+                            <span class="msb-lbl">Scholars</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">20+</span>
+                            <span class="msb-lbl">Universities</span>
+                        </div>
+                    </div>
+
+                    <div class="member-info-grid">
+                        <div class="mig-block mig-full">
+                            <p class="mig-label">About</p>
+                            <p class="mig-text">Beca Cometa is an initiative by the Intercorp Group that aims to expand access to high-quality higher education for talented Peruvian students from low-income backgrounds. The program focuses on supporting students with strong academic performance and leadership potential, helping them pursue undergraduate studies in the United States. By investing in education, Beca Cometa seeks to contribute to the long-term development of Peru and improve opportunities for future generations.</p>
+                        </div>
+                        <div class="mig-block">
+                            <p class="mig-label">Selection &amp; Support</p>
+                            <p class="mig-text">Beca Cometa follows a highly selective, multi-stage admissions process that evaluates applicants based on academic achievement, English proficiency, socioeconomic background, and personal competencies. The process includes psychological, socioeconomic, and academic evaluations across five elimination phases. Around 60 students are selected for Beca Cometa Camp, an intensive preparation program that provides SAT training, English certification support, college application guidance, essay advising, and emotional counseling. Successful participants may then receive the full Beca Cometa, which funds tuition, living expenses, travel, and other essential costs for undergraduate studies in the U.S.</p>
+                        </div>
+                    </div>
+
+                    <div class="member-placements">
+                        <div class="placements-header">
+                            <p class="placements-label">University Placements</p>
+                            <div class="uni-nav-btns">
+                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                            </div>
+                        </div>
+                        <div class="uni-track-wrap">
+                            <div class="uni-track">
+                                <div class="uni-logo-item" title="Arizona State University"><img src="asu.png" alt="Arizona State University"></div>
+                                <div class="uni-logo-item" title="Bowdoin College"><img src="bowdoin.png" alt="Bowdoin College"></div>
+                                <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
+                                <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                <div class="uni-logo-item" title="Davidson College"><img src="davidson.png" alt="Davidson College"></div>
+                                <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
+                                <div class="uni-logo-item" title="MIT"><img src="mit.png" alt="MIT"></div>
+                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                <div class="uni-logo-item" title="NYU"><img src="nyu.png" alt="NYU"></div>
+                                <div class="uni-logo-item" title="Pomona College"><img src="pomona.png" alt="Pomona College"></div>
+                                <div class="uni-logo-item" title="Stanford University"><img src="stanford.png" alt="Stanford University"></div>
+                                <div class="uni-logo-item" title="UC Berkeley"><img src="berkeley.png" alt="UC Berkeley"></div>
+                                <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
+                                <div class="uni-logo-item" title="University of Notre Dame"><img src="notredame.png" alt="University of Notre Dame"></div>
+                                <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
+                                <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
+                                <div class="uni-logo-item" title="Williams College"><img src="williams.png" alt="Williams College"></div>
+                                <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-contact">
+                        <div class="member-contact-links">
+                            <a href="https://www.becacometa.com/" target="_blank" rel="noreferrer" class="member-contact-item">
+                                <img src="website.png" alt="Website" class="contact-icon">
+                                <span>becacometa.com</span>
+                            </a>
+                            <a href="mailto:becas@somoscometa.com" class="member-contact-item">
+                                <img src="email.png" alt="Email" class="contact-icon">
+                                <span>becas@somoscometa.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Duolingo UAP ── -->
+                <article class="member-simple-card reveal">
+
+                    <div class="member-card-top">
+                        <div class="member-profile-logo">
+                            <img src="member3.png" alt="Duolingo University Access Program">
+                        </div>
+                        <div class="member-header-copy">
+                            <span class="member-region-badge">Global</span>
+                            <h3>Duolingo University Access Program</h3>
+                        </div>
+                    </div>
+
+                    <div class="member-stats-strip">
+                        <div class="member-stat-block">
+                            <span class="msb-num">25</span>
+                            <span class="msb-lbl">Current Scholars</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">12+</span>
+                            <span class="msb-lbl">Universities</span>
+                        </div>
+                    </div>
+
+                    <div class="member-info-grid">
+                        <div class="mig-block mig-full">
+                            <p class="mig-label">About</p>
+                            <p class="mig-text">The Duolingo University Access (DUA) Program, created in partnership with Duolingo and UNHCR, aims to expand access to higher education for refugee students worldwide. The program addresses the global gap in educational access, where only a small percentage of refugees are able to attend university, by providing structured pathways to top institutions. Through its efforts, DUA supports the broader goal of increasing refugee enrollment in higher education and creating more equitable academic opportunities across countries.</p>
+                        </div>
+                        <div class="mig-block">
+                            <p class="mig-label">Selection &amp; Support</p>
+                            <p class="mig-text">The program identifies high-potential refugee students and provides individualized, comprehensive support throughout the entire university application journey. This includes one-on-one advising, assistance with financial aid applications, English testing through the Duolingo English Test, and guidance through complex immigration and visa processes. Students benefit from a "wrap-around" support model, which also includes interview preparation, transition support, and funding assistance when needed. The program works closely with UNHCR offices and operates in multiple regions, supporting students who go on to enroll in universities across the United States, Canada, and other countries.</p>
+                        </div>
+                    </div>
+
+                    <div class="member-placements">
+                        <div class="placements-header">
+                            <p class="placements-label">University Placements</p>
+                            <div class="uni-nav-btns">
+                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                            </div>
+                        </div>
+                        <div class="uni-track-wrap">
+                            <div class="uni-track">
+                                <div class="uni-logo-item" title="Bennington College"><img src="bennington.jpeg" alt="Bennington College"></div>
+                                <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                <div class="uni-logo-item" title="Drexel University"><img src="drexel.png" alt="Drexel University"></div>
+                                <div class="uni-logo-item" title="Emory University"><img src="emory.png" alt="Emory University"></div>
+                                <div class="uni-logo-item" title="Georgetown University"><img src="georgetown.png" alt="Georgetown University"></div>
+                                <div class="uni-logo-item" title="Macalester College"><img src="macalester.png" alt="Macalester College"></div>
+                                <div class="uni-logo-item" title="Northeastern University"><img src="northeastern.png" alt="Northeastern University"></div>
+                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                <div class="uni-logo-item" title="University of British Columbia"><img src="ubc.png" alt="University of British Columbia"></div>
+                                <div class="uni-logo-item" title="UC Berkeley"><img src="berkeley.png" alt="UC Berkeley"></div>
+                                <div class="uni-logo-item" title="University of Camberra"><img src="uoc.png" alt="University of Camberra"></div>
+                                <div class="uni-logo-item" title="University of Johannesburg"><img src="uoj.png" alt="University of Johannesburg"></div>
+                                <div class="uni-logo-item" title="University of the People"><img src="uop.png" alt="University of the People"></div>
+                                <div class="uni-logo-item" title="University of Western Cape"><img src="uwc.png" alt="University of Western Cape"></div>
+                                <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
+                                <div class="uni-logo-item" title="Wilfrid Laurier University"><img src="wlu.png" alt="Wilfrid Laurier University"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-contact">
+                        <div class="member-contact-links">
+                            <a href="https://englishtest.duolingo.com/institutions/access?ref=blog.englishtest.duolingo.com" target="_blank" rel="noreferrer" class="member-contact-item">
+                                <img src="website.png" alt="Website" class="contact-icon">
+                                <span>englishtest.duolingo.com</span>
+                            </a>
+                            <a href="mailto:laura.kaub@duolingo.com" class="member-contact-item">
+                                <img src="email.png" alt="Email" class="contact-icon">
+                                <span>laura.kaub@duolingo.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </section>
- 
-        <section class="filter-section filter-simple reveal">
-            <label for="regionFilter" class="filter-label">Filter by region:</label>
-            <select id="regionFilter" class="region-select">
-                <option value="all">All Network Members</option>
-                <option value="africa">Africa</option>
-                <option value="latin-america">Latin America</option>
-                <option value="global">Global</option>
-            </select>
-        </section>
- 
-        <section class="member-simple-list reveal">
-            <article class="member-simple-card" data-region="africa">
-                <div class="member-profile-top">
-                    <div class="member-profile-logo">
-                        <img src="member1.png" alt="KenSAP">
-                    </div>
-                    <div class="member-profile-copy">
-                        <p class="member-region">Africa</p>
-                        <h3>KenSAP</h3>
-                    </div>
-                </div>
- 
-                <div class="member-info member-info-spaced">
-                    <p><strong>About:</strong> KenSAP provides access to world-class higher education for gifted, needy Kenyan high school graduates who would otherwise have no chance to pursue such an opportunity. Most of KenSAP students come from simple, rural backgrounds that would be utterly unrecognizable to their North American classmates, and many are from families that even by Kenyan standards count as disadvantaged.</p>
- 
-                    <p><strong>Selection process and support:</strong> KenSAP selects its students, 15 to 20 each year, through a lengthy, rigorous process that considers their academic attainments, family background, extra-curricular accomplishments, and other personal qualities. The selected students then take part in 15 weeks of residential training consisting mainly of preparation for the American SAT exams and guidance through the complex university application process. The training also includes a general orientation to American culture and the unfamiliar academic conventions of American universities.</p>
-                </div>
- 
-                <div class="member-contact">
-                    <div class="member-contact-links">
-                        <a href="https://www.kensap.org" target="_blank" rel="noreferrer" class="member-contact-item">
-                            <img src="website.png" alt="Website" class="contact-icon">
-                            <span>www.kensap.org</span>
-                        </a>
-                        <a href="mailto:alan@kensap.org" class="member-contact-item">
-                            <img src="email.png" alt="Email" class="contact-icon">
-                            <span>alan@kensap.org</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
- 
-            <article class="member-simple-card" data-region="latin-america">
-                <div class="member-profile-top">
-                    <div class="member-profile-logo">
-                        <img src="member2.png" alt="Beca Cometa">
-                    </div>
-                    <div class="member-profile-copy">
-                        <p class="member-region">Latin America</p>
-                        <h3>Beca Cometa</h3>
-                    </div>
-                </div>
- 
-                <div class="member-info member-info-spaced">
-                    <p><strong>About:</strong> Beca Cometa is an initiative by the Intercorp Group that aims to expand access to high-quality higher education for talented Peruvian students from low-income backgrounds. The program focuses on supporting students with strong academic performance and leadership potential, helping them pursue undergraduate studies in the United States. By investing in education, Beca Cometa seeks to contribute to the long-term development of Peru and improve opportunities for future generations.</p>
- 
-                    <p><strong>Selection process and support:</strong> Beca Cometa follows a highly selective, multi-stage admissions process that evaluates applicants based on academic achievement, English proficiency, socioeconomic background, and personal competencies. The process includes psychological, socioeconomic, and academic evaluations across five elimination phases. Around 60 students are selected for Beca Cometa Camp, an intensive preparation program that provides SAT training, English certification support, college application guidance, essay advising, and emotional counseling. Successful participants may then receive the full Beca Cometa, which funds tuition, living expenses, travel, and other essential costs for undergraduate studies in the U.S.</p>
-                </div>
- 
-                <div class="member-contact">
-                    <div class="member-contact-links">
-                        <a href="https://somoscometa.com/becacometa/" target="_blank" rel="noreferrer" class="member-contact-item">
-                            <img src="website.png" alt="Website" class="contact-icon">
-                            <span>https://somoscometa.com/becacometa/</span>
-                        </a>
-                        <a href="mailto:becas@somoscometa.com" class="member-contact-item">
-                            <img src="email.png" alt="Email" class="contact-icon">
-                            <span>becas@somoscometa.com</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
- 
-            <article class="member-simple-card" data-region="global">
-                <div class="member-profile-top">
-                    <div class="member-profile-logo">
-                        <img src="member3.png" alt="Duolingo University Access Program">
-                    </div>
-                    <div class="member-profile-copy">
-                        <p class="member-region">Global</p>
-                        <h3>Duolingo University Access Program</h3>
-                    </div>
-                </div>
- 
-                <div class="member-info member-info-spaced">
-                    <p><strong>About:</strong> The Duolingo University Access (DUA) Program, created in partnership with Duolingo and UNHCR, aims to expand access to higher education for refugee students worldwide. The program addresses the global gap in educational access, where only a small percentage of refugees are able to attend university, by providing structured pathways to top institutions. Through its efforts, DUA supports the broader goal of increasing refugee enrollment in higher education and creating more equitable academic opportunities across countries.</p>
- 
-                    <p><strong>Selection process and support:</strong> The program identifies high-potential refugee students and provides individualized, comprehensive support throughout the entire university application journey. This includes one-on-one advising, assistance with financial aid applications, English testing through the Duolingo English Test, and guidance through complex immigration and visa processes. Students benefit from a wrap-around support model, which also includes interview preparation, transition support, and funding assistance when needed. The program works closely with UNHCR offices and operates in multiple regions, supporting students who go on to enroll in universities across the United States, Canada, and other countries.</p>
-                </div>
- 
-                <div class="member-contact">
-                    <div class="member-contact-links">
-                        <a href="https://www.duolingo.com" target="_blank" rel="noreferrer" class="member-contact-item">
-                            <img src="website.png" alt="Website" class="contact-icon">
-                            <span>www.duolingo.com</span>
-                        </a>
-                        <a href="mailto:university-access@duolingo.com" class="member-contact-item">
-                            <img src="email.png" alt="Email" class="contact-icon">
-                            <span>university-access@duolingo.com</span>
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </section>
+
     </main>
- 
-     <footer>
+
+    <footer>
         <div class="footer-container">
             <div class="footer-brand">
                 <img src="logo.png" alt="ICAN Logo">
-                <p>The global standard for international college access.</p>
+                <p>Education access beyond borders: A network of organizations that support global talent seeking higher education opportunities.</p>
             </div>
 
             <div class="footer-contact">
@@ -172,35 +334,35 @@
     </footer>
 
     <script>
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                }
-            });
-        }, { threshold: 0.15 });
+        // ═══════════════════════════════════════════════════════════════
+        // CAROUSEL SCROLL FUNCTION
+        // ═══════════════════════════════════════════════════════════════
+        function scrollUni(button, direction) {
+            // Find the nearest uni-track container
+            const track = button.closest('.uni-nav-btns').parentElement.querySelector('.uni-track');
+            const scrollAmount = 220; // Width of items + gap (72px + 10px gap + padding)
+            
+            if (direction === -1) {
+                track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
 
-        revealElements.forEach((element) => revealObserver.observe(element));
-    </script>
- 
-    <script>
-        const regionFilter = document.getElementById('regionFilter');
-        const memberCards = document.querySelectorAll('.member-simple-card');
- 
-        regionFilter.addEventListener('change', () => {
-            const selectedFilter = regionFilter.value;
- 
-            memberCards.forEach((card) => {
-                const cardRegion = card.dataset.region;
-                if (selectedFilter === 'all' || cardRegion === selectedFilter) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+        // ═══════════════════════════════════════════════════════════════
+        // ACTIVE NAV LINK DETECTION
+        // ═══════════════════════════════════════════════════════════════
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-links a').forEach((link) => {
+            const linkPage = link.getAttribute('href').split('/').pop();
+            if (linkPage === currentPage) {
+                link.parentElement.classList.add('active');
+            }
         });
- 
+
+        // ═══════════════════════════════════════════════════════════════
+        // SCROLL REVEAL
+        // ═══════════════════════════════════════════════════════════════
         const revealElements = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -209,7 +371,6 @@
                 }
             });
         }, { threshold: 0.15 });
- 
         revealElements.forEach((element) => revealObserver.observe(element));
     </script>
 </body>
