@@ -112,6 +112,7 @@ nav {
 .header {
     background-image: linear-gradient(rgba(6, 27, 53, 0.88), rgba(6, 27, 53, 0.92)), url(background.jpg);
     height: 100dvh;
+    object-fit: cover;
     background-size: cover;
     background-position: center;
     display: flex;
