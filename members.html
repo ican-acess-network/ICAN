@@ -38,7 +38,21 @@
                 <h2 class="section-title">A network of organizations that support global talent seeking higher education opportunities.</h2>
                 <p>ICAN members are united by a commitment to helping talented students from low-resource backgrounds access international university opportunities. Each organization brings its own regional expertise, advising model, and student support approach.</p>
             </div>
+        <!-- ── Filter Bar ── -->
+        <div class="members-filter-bar reveal">
+            <div class="members-search-wrap">
+                <input type="text" id="memberSearch" class="members-search" placeholder="Search organizations…" oninput="filterMembers()">
+            </div>
+            <div class="members-region-btns">
+                <button class="region-btn active" onclick="filterMembers(this)" data-region="all">All</button>
+                <button class="region-btn" onclick="filterMembers(this)" data-region="Africa">Africa</button>
+                <button class="region-btn" onclick="filterMembers(this)" data-region="Latin America">Latin America</button>
+                <button class="region-btn" onclick="filterMembers(this)" data-region="Europe">Europe</button>
+                <button class="region-btn" onclick="filterMembers(this)" data-region="Global">Global</button>
+            </div>
+        </div>
 
+        <p class="members-no-results" id="noResults" style="display:none;">No members match your search.</p>
             <div class="member-simple-list">
 
                 <!-- ── KenSAP ── -->
@@ -56,12 +70,16 @@
 
                     <div class="member-stats-strip">
                         <div class="member-stat-block">
-                            <span class="msb-num">338</span>
+                            <span class="msb-num">330+</span>
                             <span class="msb-lbl">Scholars</span>
                         </div>
                         <div class="member-stat-block">
-                            <span class="msb-num">237</span>
+                            <span class="msb-num">230+</span>
                             <span class="msb-lbl">Alumni</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">50+</span>
+                            <span class="msb-lbl">Universities</span>
                         </div>
                     </div>
 
@@ -140,7 +158,7 @@
                         <div class="member-contact-links">
                             <a href="https://www.kensap.org" target="_blank" rel="noreferrer" class="member-contact-item">
                                 <img src="website.png" alt="Website" class="contact-icon">
-                                <span>www.kensap.org</span>
+                                <span>kensap.org</span>
                             </a>
                             <a href="mailto:alan@kensap.org" class="member-contact-item">
                                 <img src="email.png" alt="Email" class="contact-icon">
@@ -165,11 +183,15 @@
 
                     <div class="member-stats-strip">
                         <div class="member-stat-block">
-                            <span class="msb-num">107</span>
+                            <span class="msb-num">100+</span>
                             <span class="msb-lbl">Scholars</span>
                         </div>
                         <div class="member-stat-block">
-                            <span class="msb-num">20+</span>
+                            <span class="msb-num">65++</span>
+                            <span class="msb-lbl">Scholars in Undergrad</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">25+</span>
                             <span class="msb-lbl">Universities</span>
                         </div>
                     </div>
@@ -310,6 +332,400 @@
                     </div>
                 </article>
 
+                <!-- ── UGS ── -->
+                <article class="member-simple-card reveal">
+
+                    <div class="member-card-top">
+                        <div class="member-profile-logo">
+                            <img src="member4.png" alt="Ukraine Global Scholars Foundation">
+                        </div>
+                        <div class="member-header-copy">
+                            <span class="member-region-badge">Europe</span>
+                            <h3>Ukraine Global Scholars Foundation</h3>
+                        </div>
+                    </div>
+
+                    <div class="member-stats-strip">
+                        <div class="member-stat-block">
+                            <span class="msb-num">80+</span>
+                            <span class="msb-lbl">Annual Scholars</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">200+</span>
+                            <span class="msb-lbl">Scholars in Undergrad</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">120+</span>
+                            <span class="msb-lbl">Alumni</span>
+                        </div>
+                    </div>
+
+                    <div class="member-info-grid">
+                        <div class="mig-block mig-full">
+                            <p class="mig-label">About</p>
+                            <p class="mig-text">Ukraine Global Scholars (UGS) is a 501(c)(3) public charity founded in 2015 that has helped 350+ Ukrainian high school students from modest backgrounds receive $100+ million in scholarships to top global boarding schools and universities. In exchange, students commit to return to Ukraine for at least five years. UGS aims to develop a new generation of Ukrainian leaders capable of creating a victorious and prosperous future in Ukraine. Through mentorship, education, career guidance, and empowerment for, UGS seeks to scale its impact and generate a ripple effect of positive impact on the country.</p>
+                        </div>
+                        <div class="mig-block">
+                            <p class="mig-label">Selection &amp; Support</p>
+                            <p class="mig-text">UGS selects Ukraine students through a rigorous four-stage process: application review, English and Math assessments, interviews, and financial background verification. Students receive individualized admissions support, including school selection guidance, essay development, interview preparation, an on-site boot camp in Ukraine, and an online SAT boot camp led by alumni. Each participant is matched with dedicated mentors who provide personalized guidance. UGS also helps students secure full financial aid, covers application-related costs when needed, and offers Last Mile and Emergency Funds for expenses such as flights, visas, and unexpected family needs. Additional support includes mental health resources, host family connections, career opportunities, seed grants, and long-term alumni engagement.</p>
+                        </div>
+                    </div>
+
+                    <div class="member-placements">
+                        <div class="placements-header">
+                            <p class="placements-label">University Placements</p>
+                            <div class="uni-nav-btns">
+                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                            </div>
+                        </div>
+                        <div class="uni-track-wrap">
+                            <div class="uni-track">
+                                <div class="uni-logo-item" title="Amherst College"><img src="amherst.png" alt="Amherst College"></div>
+                                <div class="uni-logo-item" title="Babson College"><img src="babson.png" alt="Babson College"></div>
+                                <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
+                                <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
+                                <div class="uni-logo-item" title="MIT"><img src="mit.png" alt="MIT"></div>
+                                <div class="uni-logo-item" title="Minerva University"><img src="minerva.png" alt="Minerva University"></div>
+                                <div class="uni-logo-item" title="NYU AD"><img src="nyuad.png" alt="NYU AD"></div>
+                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
+                                <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
+                                <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
+                                <div class="uni-logo-item" title="Vassar College"><img src="vassar.png" alt="Vassar College"></div>                           
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-contact">
+                        <div class="member-contact-links">
+                            <a href="https://www.ugs.foundation/" target="_blank" rel="noreferrer" class="member-contact-item">
+                                <img src="website.png" alt="Website" class="contact-icon">
+                                <span>ugs.foundation</span>
+                            </a>
+                            <a href="mailto:info@ugs.foundation" class="member-contact-item">
+                                <img src="email.png" alt="Email" class="contact-icon">
+                                <span>info@ugs.foundation</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── AAI ── -->
+                <article class="member-simple-card reveal">
+
+                    <div class="member-card-top">
+                        <div class="member-profile-logo">
+                            <img src="member5.png" alt="Ashinaga Africa Initiative">
+                        </div>
+                        <div class="member-header-copy">
+                            <span class="member-region-badge">Africa</span>
+                            <h3>Ashinaga Africa Initiative</h3>
+                        </div>
+                    </div>
+
+                    <div class="member-stats-strip">
+                        <div class="member-stat-block">
+                            <span class="msb-num">30+</span>
+                            <span class="msb-lbl">Annual Scholars</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">150+</span>
+                            <span class="msb-lbl">Scholars in Undergrad</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">40+</span>
+                            <span class="msb-lbl">Universities</span>
+                        </div>
+                    </div>
+
+                    <div class="member-info-grid">
+                        <div class="mig-block mig-full">
+                            <p class="mig-label">About</p>
+                            <p class="mig-text">Founded in 2014, the Ashinaga Africa Initiative (AAI) supports high-achieving, low-income students from Sub-Saharan Africa who have lost one or both parents. Our mission focuses on our Scholars’ personal, academic, and professional growth. We help them develop the values of ethical and innovative leadership. We also prepare them to succeed academically at universities in the United States, the United Kingdom, Japan, France and Brazil. Additionally, we encourage them to return to Sub-Saharan Africa and contribute to social change and development in their communities across the continent.</p>
+                        </div>
+                        <div class="mig-block">
+                            <p class="mig-label">Selection &amp; Support</p>
+                            <p class="mig-text">Ashinaga Africa Initiative in the U.S., U.K. and Japan (Anglophone AAI)  partners with high schools in most sub-Saharan countries that identify 3–35 high-achieving, low-income students each year. Beyond selection, the program works closely with partner schools, training teachers to use free online learning resources to strengthen students’ academic foundations. High-potential students in grades 9–11 may receive tutoring and academic enrichment opportunities to help them reach their full potential. Selected scholars complete an intensive Academic Preparation Year with weekly monitoring and receive individualized guidance on university and scholarship applications. When necessary, Ashinaga also provides financial support to help cover costs not fully met by university aid packages.</p>
+                        </div>
+                    </div>
+
+                    <div class="member-placements">
+                        <div class="placements-header">
+                            <p class="placements-label">University Placements</p>
+                            <div class="uni-nav-btns">
+                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                            </div>
+                        </div>
+                        <div class="uni-track-wrap">
+                            <div class="uni-track">
+                                <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
+                                <div class="uni-logo-item" title="Cornell University"><img src="cornell.png" alt="Cornell University"></div>                                
+                                <div class="uni-logo-item" title="Colgate University"><img src="colgate.png" alt="Colgate University"></div>
+                                <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
+                                <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
+                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                <div class="uni-logo-item" title="University of Miami"><img src="umiami.png" alt="University of Miami"></div>
+                                <div class="uni-logo-item" title="University of Wisconsin-Madison"><img src="uwmadison.png" alt="University of Wisconsin-Madison"></div>
+                                <div class="uni-logo-item" title="University of Rochester"><img src="urochester.png" alt="University of Rochester"></div>
+                                <div class="uni-logo-item" title="York University"><img src="york.png" alt="York University"></div>                           
+                                <div class="uni-logo-item" title="University of Warwick"><img src="warwick.png" alt="University of Warwick"></div>                           
+                                <div class="uni-logo-item" title="University of São Paulo"><img src="usp.png" alt="University of São Paulo"></div>                           
+                                <div class="uni-logo-item" title="Waseda University"><img src="waseda.png" alt="Waseda University"></div>                           
+                                <div class="uni-logo-item" title="University of Tokyo"><img src="utokyo.png" alt="University of Tokyo"></div>                           
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-contact">
+                        <div class="member-contact-links">
+                            <a href="https://www.ugs.foundation/" target="_blank" rel="noreferrer" class="member-contact-item">
+                                <img src="website.png" alt="Website" class="contact-icon">
+                                <span>ugs.foundation</span>
+                            </a>
+                            <a href="mailto:info@ugs.foundation" class="member-contact-item">
+                                <img src="email.png" alt="Email" class="contact-icon">
+                                <span>info@ugs.foundation</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Fundação Estudar ── -->
+                <article class="member-simple-card reveal">
+
+                    <div class="member-card-top">
+                        <div class="member-profile-logo">
+                            <img src="member6.png" alt="Fundação Estudar">
+                        </div>
+                        <div class="member-header-copy">
+                            <span class="member-region-badge">Latin America</span>
+                            <h3>Fundação Estudar</h3>
+                        </div>
+                    </div>
+
+                    <div class="member-stats-strip">
+                        <div class="member-stat-block">
+                            <span class="msb-num">65+</span>
+                            <span class="msb-lbl">Annual Scholars</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">600+</span>
+                            <span class="msb-lbl">Alumni</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">15+</span>
+                            <span class="msb-lbl">Universities</span>
+                        </div>
+                    </div>
+
+                    <div class="member-info-grid">
+                        <div class="mig-block mig-full">
+                            <p class="mig-label">About</p>
+                            <p class="mig-text">Founded in 1991, Fundação Estudar creates opportunities for talented young people to maximize their potential and generate positive impact in Brazil. Its flagship initiatives include the Líderes Estudar Fellowship, which supports promising leaders, and the Prep Program, a college access initiative for talented Brazilian students.</p>
+                        </div>
+                        <div class="mig-block">
+                            <p class="mig-label">Selection &amp; Support</p>
+                            <p class="mig-text">Fundação Estudar programs receive approximately 10,000 applications each year. Our application and interview process is conducted entirely in English and is designed to mirror the U.S. college admissions process. It is open for Brazilian students in their final year of high school or first gap year, who submit a written application, and selected candidates are invited to interview. Those admitted receive comprehensive support throughout their university application journey, including college counseling, need-based financial assistance, weekly classes, SAT and English preparation, informational workshops, mentorship, mental health support, and enrichment opportunities. The program also assists students and their high schools with required documentation. In addition, all students apply for the Líderes Estudar Scholarship, which provides support toward the cost of attendance at university.</p>
+                        </div>
+                    </div>
+
+                    <div class="member-placements">
+                        <div class="placements-header">
+                            <p class="placements-label">University Placements</p>
+                            <div class="uni-nav-btns">
+                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                            </div>
+                        </div>
+                        <div class="uni-track-wrap">
+                            <div class="uni-track">
+                                <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
+                                <div class="uni-logo-item" title="Columbia University"><img src="columbia.png" alt="Columbia University"></div>                                
+                                <div class="uni-logo-item" title="Dartmouth Colllege"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
+                                <div class="uni-logo-item" title="Georgia Institute of Technology"><img src="georgiatech.png" alt="Georgia Institute of Technology"></div>
+                                <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
+                                <div class="uni-logo-item" title="Massachusetts Institute of Technology"><img src="mit.png" alt="Massachusetts Institute of Technology"></div>
+                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
+                                <div class="uni-logo-item" title="Stanford University"><img src="stanford.png" alt="Stanford University"></div>
+                                <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
+                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                <div class="uni-logo-item" title="University of Notre Dame"><img src="notredame.png" alt="University of Notre Dame"></div>
+                                <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
+                                <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>                           
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-contact">
+                        <div class="member-contact-links">
+                            <a href="https://estudar.org.br/ " target="_blank" rel="noreferrer" class="member-contact-item">
+                                <img src="website.png" alt="Website" class="contact-icon">
+                                <span>estudar.org.br</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </article>
+
+                 <!-- ── Bridge2Rwanda / Isomo ── -->
+                <article class="member-simple-card reveal">
+
+                    <div class="member-card-top">
+                        <div class="member-profile-logo">
+                            <img src="member7.png" alt="Bridge2Rwanda / Isomo">
+                        </div>
+                        <div class="member-header-copy">
+                            <span class="member-region-badge">Africa</span>
+                            <h3>Bridge2Rwanda / Isomo</h3>
+                        </div>
+                    </div>
+
+                    <div class="member-stats-strip">
+                        <div class="member-stat-block">
+                            <span class="msb-num">80+</span>
+                            <span class="msb-lbl">Annual Scholars</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">230+</span>
+                            <span class="msb-lbl">Scholars in Undergrad</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">260+</span>
+                            <span class="msb-lbl">Alumni</span>
+                        </div>
+                    </div>
+
+                    <div class="member-info-grid">
+                        <div class="mig-block mig-full">
+                            <p class="mig-label">About</p>
+                            <p class="mig-text">Bridge2Rwanda, since 2011, has been dedicated to creating opportunities for high-capacity leaders across Africa to transform their communities and accelerate their countries’ development. One of its key initiatives, Isomo, is an education innovation lab that addresses challenges in literacy, critical thinking, and university access in Rwanda and across the continent. Through Africa-centered immersive residential bootcamps and structured counseling Isomo uses language acquisition as a vehicle for developing knowledge, skills, and critical thinking. We equip young scholars with the academic skills, ethical grounding, and self-reflection necessary to compete for, excel at, and ultimately return from top-tier global universities to drive Rwanda's socioeconomic growth.</p>
+                        </div>
+                        <div class="mig-block">
+                            <p class="mig-label">Selection &amp; Support</p>
+                            <p class="mig-text">Isomo is open to high-achieving students aged 15–19 in Grade 10, primarily from low-income backgrounds. Applications are open annually from December to April. The program seeks students who demonstrate academic excellence, leadership potential, and a commitment to contributing to Africa’s development. Selected students participate in a three-year program: a two-month residential boot camp after Grade 10, a second two-month residential boot camp after Grade 11, and a gap year program following Grade 12. Alongside intensive English immersion, students receive university counseling, internship opportunities, financial aid advising, and financial support when needed to access higher education and prepare for successful careers.</p>
+                        </div>
+                    </div>
+
+                    <div class="member-placements">
+                        <div class="placements-header">
+                            <p class="placements-label">University Placements</p>
+                            <div class="uni-nav-btns">
+                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                            </div>
+                        </div>
+                        <div class="uni-track-wrap">
+                            <div class="uni-track">
+                                <div class="uni-logo-item" title="Abilene Christian University"><img src="abilene.png" alt="Abilene Christian University"></div>
+                                <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                <div class="uni-logo-item" title="Oklahoma Christian University"><img src="okchristian.png" alt="Oklahoma Christian University"></div>
+                                <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
+                                <div class="uni-logo-item" title="University of Rochester"><img src="urochester.png" alt="University of Rochester"></div>
+                                <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>                           
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-contact">
+                        <div class="member-contact-links">
+                            <a href="https://www.bridge2rwanda.org/ " target="_blank" rel="noreferrer" class="member-contact-item">
+                                <img src="website.png" alt="Website" class="contact-icon">
+                                <span>bridge2rwanda.org</span>
+                            </a>
+                            <a href="mailto:apply@bridge2rwanda.org" class="member-contact-item">
+                                <img src="email.png" alt="Email" class="contact-icon">
+                                <span>apply@bridge2rwanda.org</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── ISMART ── -->
+                <article class="member-simple-card reveal">
+
+                    <div class="member-card-top">
+                        <div class="member-profile-logo">
+                            <img src="member8.png" alt="ISMART">
+                        </div>
+                        <div class="member-header-copy">
+                            <span class="member-region-badge">Latin America</span>
+                            <h3>Instituto Social para Motivar, Apoiar e Reconhecer Talentos - ISMART (Ismart Institute)</h3>
+                        </div>
+                    </div>
+
+                    <div class="member-stats-strip">
+                        <div class="member-stat-block">
+                            <span class="msb-num">1100+</span>
+                            <span class="msb-lbl">Annual Scholars</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">1200+</span>
+                            <span class="msb-lbl">Scholars in Undergrad</span>
+                        </div>
+                        <div class="member-stat-block">
+                            <span class="msb-num">800+</span>
+                            <span class="msb-lbl">Alumni</span>
+                        </div>
+                    </div>
+
+                    <div class="member-info-grid">
+                        <div class="mig-block mig-full">
+                            <p class="mig-label">About</p>
+                            <p class="mig-text">Founded in 1999, Ismart seeks to help talented low-income students reach their full professional potential through programs grounded in excellence, ethics, and productive creativity. The organization identifies high-achieving students and supports them from secondary school through college. With an overall acceptance rate of approximately 8%, Ismart provides academic enrichment, mentorship, and financial support to strengthen students’ educational opportunities and help them access successful careers, ultimately contributing to greater social mobility and breaking cycles of poverty.</p>
+                        </div>
+                        <div class="mig-block">
+                            <p class="mig-label">Selection &amp; Support</p>
+                            <p class="mig-text">Ismart has two entry points: students selected in 7th grade join online programs in 8th grade, while those selected in 9th grade enter the program in 10th grade. Eligibility is limited to low-income students, with family income capped at approximately two minimum wages per capita. The selection process includes an initial screening, Portuguese and Math assessments, a socioeconomic evaluation, the Ismart Challenge, family interviews, individual student interviews, and group activities. Students receive academic enrichment, technology and English education, and later career and college counseling. Participants in the in-person program attend top schools with expenses fully covered. Higher Education program participants receive mentorship, networking opportunities, career guidance, and living stipends.</p>
+                        </div>
+                    </div>
+
+                    <div class="member-placements">
+                        <div class="placements-header">
+                            <p class="placements-label">University Placements</p>
+                            <div class="uni-nav-btns">
+                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                            </div>
+                        </div>
+                        <div class="uni-track-wrap">
+                            <div class="uni-track">
+                                <div class="uni-logo-item" title="Babson College"><img src="babson.png" alt="Babson College"></div>
+                                <div class="uni-logo-item" title="Bocconi University"><img src="bocconi.png" alt="Bocconi University"></div>
+                                <div class="uni-logo-item" title="Carnegie Mellon University"><img src="carnegie.png" alt="Carnegie Mellon University"></div>
+                                <div class="uni-logo-item" title="Claremont McKenna College"><img src="cmc.png" alt="Claremont McKenna College"></div>
+                                <div class="uni-logo-item" title="Clark University"><img src="clark.png" alt="Clark University"></div>
+                                <div class="uni-logo-item" title="Grinnell College"><img src="grinnell.png" alt="Grinnell College"></div>
+                                <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
+                                <div class="uni-logo-item" title="Lake Forest College"><img src="lakeforest.png" alt="Lake Forest College"></div>
+                                <div class="uni-logo-item" title="Minerva University"><img src="minerva.png" alt="Minerva University"></div>
+                                <div class="uni-logo-item" title="New York University Abu Dhabi"><img src="nyuad.png" alt="New York University Abu Dhabi"></div>
+                                <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
+                                <div class="uni-logo-item" title="University College London"><img src="ucl.png" alt="University College London"></div>
+                                <div class="uni-logo-item" title="University of Notre Dame"><img src="notredame.png" alt="University of Notre Dame"></div>
+                                <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member-contact">
+                        <div class="member-contact-links">
+                            <a href="https://www.ismart.org.br/" target="_blank" rel="noreferrer" class="member-contact-item">
+                                <img src="website.png" alt="Website" class="contact-icon">
+                                <span>ismart.org.br</span>
+                            </a>
+                            <a href="mailto:prepestudarfora@ismart.org.br" class="member-contact-item">
+                                <img src="email.png" alt="Email" class="contact-icon">
+                                <span>prepestudarfora@ismart.org.br</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </section>
 
@@ -334,44 +750,81 @@
     </footer>
 
     <script>
-        // ═══════════════════════════════════════════════════════════════
-        // CAROUSEL SCROLL FUNCTION
-        // ═══════════════════════════════════════════════════════════════
-        function scrollUni(button, direction) {
-            // Find the nearest uni-track container
-            const track = button.closest('.uni-nav-btns').parentElement.querySelector('.uni-track');
-            const scrollAmount = 220; // Width of items + gap (72px + 10px gap + padding)
-            
-            if (direction === -1) {
-                track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            } else {
-                track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        
+    // CAROUSEL SCROLL FUNCTION // 
+
+    function scrollUni(btn, dir) {
+        const track = btn.closest('.member-placements').querySelector('.uni-track');
+        const GAP = 10;
+        const ITEM_WIDTH = 72;
+        const step = ITEM_WIDTH + GAP;
+        const visibleCount = Math.floor(track.parentElement.offsetWidth / step);
+        const maxIndex = Math.max(0, track.children.length - visibleCount);
+
+        let currentIndex = parseInt(track.dataset.index || '0');
+        currentIndex = Math.min(Math.max(currentIndex + dir, 0), maxIndex);
+        track.dataset.index = currentIndex;
+
+        track.style.transform = `translateX(-${currentIndex * step}px)`;
+    }
+
+    // ACTIVE NAV LINK DETECTION //
+
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach((link) => {
+        const linkPage = link.getAttribute('href').split('/').pop();
+        if (linkPage === currentPage) {
+            link.parentElement.classList.add('active');
+        }
+    });
+
+    // SCROLL REVEAL //
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
             }
+        });
+    }, { threshold: 0.15 });
+    revealElements.forEach((element) => revealObserver.observe(element));
+
+    // MEMBER FILTER // 
+    
+    let activeRegion = 'all';
+
+    function filterMembers(btn) {
+        // Update active region if a button was clicked
+        if (btn) {
+            activeRegion = btn.dataset.region;
+            document.querySelectorAll('.region-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
         }
 
-        // ═══════════════════════════════════════════════════════════════
-        // ACTIVE NAV LINK DETECTION
-        // ═══════════════════════════════════════════════════════════════
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        document.querySelectorAll('.nav-links a').forEach((link) => {
-            const linkPage = link.getAttribute('href').split('/').pop();
-            if (linkPage === currentPage) {
-                link.parentElement.classList.add('active');
+        const query = document.getElementById('memberSearch').value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.member-simple-card');
+        let visible = 0;
+
+        cards.forEach(card => {
+            const region = card.querySelector('.member-region-badge')?.textContent.trim() || '';
+            const name = card.querySelector('h3')?.textContent.toLowerCase() || '';
+            const about = card.querySelector('.mig-text')?.textContent.toLowerCase() || '';
+
+            const matchesRegion = activeRegion === 'all' || region === activeRegion;
+            const matchesSearch = !query || name.includes(query) || about.includes(query) || region.toLowerCase().includes(query);
+
+            if (matchesRegion && matchesSearch) {
+                card.style.display = '';
+                visible++;
+            } else {
+                card.style.display = 'none';
             }
         });
 
-        // ═══════════════════════════════════════════════════════════════
-        // SCROLL REVEAL
-        // ═══════════════════════════════════════════════════════════════
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                }
-            });
-        }, { threshold: 0.15 });
-        revealElements.forEach((element) => revealObserver.observe(element));
-    </script>
+        document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+    }
+
+</script>
 </body>
 </html>
