@@ -454,22 +454,13 @@ nav {
     grid-template-columns: repeat(2, 340px);
 }
 
-@media (max-width: 640px) {
-    .members-grid-two {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* FAQ */
 .faq {
     background-color: #ffffff;
     text-align: center;
 }
 
-.faq-list { text-align: left; 
-              max-width: 1100px;
-}
-
+.faq-list { text-align: left; }
 
 .faq-item {
     border-bottom: 1px solid #e0e0e0;
@@ -1206,9 +1197,54 @@ footer {
     }
 }
 
+/* ── Accordion ── */
+.member-accordion-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    border-top: 1px solid #ebe7e0;
+    margin-top: 20px;
+    padding: 14px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: "Balthazar", serif;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #061b35;
+    transition: color 0.2s ease;
+}
+
+.member-accordion-btn:hover {
+    color: #ffd717;
+}
+
+.member-accordion-icon {
+    font-size: 20px;
+    color: #ffd717;
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+.member-accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, opacity 0.35s ease;
+    opacity: 0;
+}
+
+.member-simple-card.open .member-accordion-body {
+    max-height: 2000px;
+    opacity: 1;
+}
+
+.member-simple-card.open .member-accordion-icon {
+    transform: rotate(45deg);
+}
+
 @media (max-width: 640px) {
-    .header { height: 65vh; 
-            padding-top: 80px;}
+    .header { height: 65vh; }
     .header-headline { font-size: 36px; }
     .header-sub { font-size: 17px; }
 
