@@ -466,7 +466,10 @@ nav {
     text-align: center;
 }
 
-.faq-list { text-align: left; }
+.faq-list { text-align: left; 
+              max-width: 1100px;
+}
+
 
 .faq-item {
     border-bottom: 1px solid #e0e0e0;
