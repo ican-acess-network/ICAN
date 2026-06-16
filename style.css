@@ -454,6 +454,12 @@ nav {
     grid-template-columns: repeat(2, 340px);
 }
 
+@media (max-width: 640px) {
+    .members-grid-two {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* FAQ */
 .faq {
     background-color: #ffffff;
