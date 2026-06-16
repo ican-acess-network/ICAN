@@ -36,9 +36,7 @@ body {
     transform: translateY(0);
 }
 
-/* ══════════════════════════════
-   NAVIGATION
-══════════════════════════════ */
+/*    NAVIGATION  */
 nav {
     background-color: #061b35;
     width: 100%;
@@ -106,9 +104,7 @@ nav {
 }
 
 
-/* ══════════════════════════════
-   HOME HEADER
-══════════════════════════════ */
+/* HOME HEADER */
 .header {
     background-image: linear-gradient(rgba(6, 27, 53, 0.88), rgba(6, 27, 53, 0.92)), url(background.jpg);
     height: 100dvh;
@@ -161,9 +157,7 @@ nav {
     transform: translateY(-2px);
 }
 
-/* ══════════════════════════════
-   SUBPAGE HEROES
-══════════════════════════════ */
+/* SUBPAGE HEROES */
 .subpage-hero,
 .members-hero,
 .membership-hero {
@@ -231,9 +225,7 @@ nav {
     line-height: 1.7;
 }
 
-/* ══════════════════════════════
-   SHARED BUTTON
-══════════════════════════════ */
+/* SHARED BUTTON */
 .btn {
     display: inline-block;
     padding: 15px 40px;
@@ -250,9 +242,7 @@ nav {
     background-color: #f6f4f1;
 }
 
-/* ══════════════════════════════
-   SECTION PADDING
-══════════════════════════════ */
+/* SECTION PADDING */
 .mission,
 .members,
 .faq,
@@ -262,9 +252,7 @@ nav {
     padding: 80px 40px;
 }
 
-/* ══════════════════════════════
-   MISSION SECTION
-══════════════════════════════ */
+/* MISSION SECTION */
 .mission {
     background-color: #f0f4f8;
     text-align: center;
@@ -385,9 +373,7 @@ nav {
     top: 10px;
 }
 
-/* ══════════════════════════════
-   STATS BAR
-══════════════════════════════ */
+/* STATS BAR */
 .stats {
     background-color: #ffd717;
     display: flex;
@@ -411,9 +397,7 @@ nav {
     margin-top: 5px;
 }
 
-/* ══════════════════════════════
-   MEMBERS SECTION (HOME)
-══════════════════════════════ */
+/* MEMBERS SECTION (HOME) */
 .members {
     background-color: #f0f4f8;
     text-align: center;
@@ -429,10 +413,11 @@ nav {
     gap: 20px;
     max-width: 1100px;
     margin: 0 auto 28px auto;
+    justify-content: center;
 }
 
 .members-grid-three {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 340px);
 }
 
 .member-card {
@@ -465,9 +450,11 @@ nav {
     color: #061b35;
 }
 
-/* ══════════════════════════════
-   FAQ
-══════════════════════════════ */
+.members-grid-two {
+    grid-template-columns: repeat(2, 340px);
+}
+
+/* FAQ */
 .faq {
     background-color: #ffffff;
     text-align: center;
@@ -539,9 +526,7 @@ nav {
     margin-bottom: 10px;
 }
 
-/* ══════════════════════════════
-   CONTACT
-══════════════════════════════ */
+/* CONTACT */
 .contact {
     background-color: #f0f4f8;
     text-align: center;
@@ -611,9 +596,7 @@ nav {
     font-size: 18px;
 }
 
-/* ══════════════════════════════
-   MEMBER PROFILE CARDS (ABOUT PAGE)
-══════════════════════════════ */
+/* MEMBER PROFILE CARDS (ABOUT PAGE) */
 .profiles-intro {
     text-align: left;
     margin-bottom: 50px;
@@ -869,6 +852,78 @@ nav {
     opacity: 1;
 }
 
+/* ── Filter Bar ── */
+.members-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto 32px auto;
+    flex-wrap: wrap;
+}
+
+.members-search-wrap {
+    flex: 1;
+    min-width: 200px;
+}
+
+.members-search {
+    width: 100%;
+    padding: 10px 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: "Balthazar", serif;
+    color: #061b35;
+    background-color: #ffffff;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.members-search:focus {
+    border: 1px solid #ffd717;
+    box-shadow: 0 0 0 4px rgba(255, 215, 23, 0.12);
+}
+
+.members-region-btns {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.region-btn {
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: #061b35;
+    font-size: 14px;
+    font-family: "Balthazar", serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.region-btn:hover {
+    border-color: #ffd717;
+    background-color: #fffbea;
+}
+
+.region-btn.active {
+    background-color: #061b35;
+    color: #ffd717;
+    border-color: #061b35;
+}
+
+.members-no-results {
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+    padding: 40px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 /* ─── Contact links ─── */
 .member-contact {
     padding-top: 20px;
@@ -903,9 +958,7 @@ nav {
     flex-shrink: 0;
 }
 
-/* ══════════════════════════════
-   MISSION / VISION BLOCKS
-══════════════════════════════ */
+/* MISSION / VISION BLOCKS */
 .mv-section {
     padding: 90px 40px;
     background-color: #f6f4f1;
@@ -976,9 +1029,7 @@ nav {
     line-height: 1.8;
 }
 
-/* ══════════════════════════════
-   CORE VALUES GRID
-══════════════════════════════ */
+/* CORE VALUES GRID */
 .values-section {
     padding: 90px 40px;
     background-color: #f0f4f8;
@@ -1054,9 +1105,7 @@ nav {
     text-align: center;
 }
 
-/* ══════════════════════════════
-   FOOTER
-══════════════════════════════ */
+/* FOOTER */
 footer {
     background-color: #061b35;
     color: #f6f4f1;
@@ -1108,9 +1157,7 @@ footer {
     font-size: 13px;
 }
 
-/* ══════════════════════════════
-   RESPONSIVE
-══════════════════════════════ */
+/* RESPONSIVE */
 @media (max-width: 980px) {
     nav {
         padding: 10px 20px;
