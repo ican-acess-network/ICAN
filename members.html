@@ -32,32 +32,32 @@
     </header>
  
     <main>
-        <!-- Member Profiles -->
         <section class="profiles-page" id="members">
             <div class="profiles-intro reveal">
                 <h2 class="section-title">A network of organizations that support global talent seeking higher education opportunities.</h2>
                 <p>ICAN members are united by a commitment to helping talented students from low-resource backgrounds access international university opportunities. Each organization brings its own regional expertise, advising model, and student support approach.</p>
             </div>
-        <!-- ── Filter Bar ── -->
-        <div class="members-filter-bar reveal">
-            <div class="members-search-wrap">
-                <input type="text" id="memberSearch" class="members-search" placeholder="Search organizations…" oninput="filterMembers()">
-            </div>
-            <div class="members-region-btns">
-                <button class="region-btn active" onclick="filterMembers(this)" data-region="all">All</button>
-                <button class="region-btn" onclick="filterMembers(this)" data-region="Africa">Africa</button>
-                <button class="region-btn" onclick="filterMembers(this)" data-region="Latin America">Latin America</button>
-                <button class="region-btn" onclick="filterMembers(this)" data-region="Europe">Europe</button>
-                <button class="region-btn" onclick="filterMembers(this)" data-region="Global">Global</button>
-            </div>
-        </div>
 
-        <p class="members-no-results" id="noResults" style="display:none;">No members match your search.</p>
+            <!-- Filter Bar -->
+            <div class="members-filter-bar reveal">
+                <div class="members-search-wrap">
+                    <input type="text" id="memberSearch" class="members-search" placeholder="Search organizations…" oninput="filterMembers()">
+                </div>
+                <div class="members-region-btns">
+                    <button class="region-btn active" onclick="filterMembers(this)" data-region="all">All</button>
+                    <button class="region-btn" onclick="filterMembers(this)" data-region="Africa">Africa</button>
+                    <button class="region-btn" onclick="filterMembers(this)" data-region="Latin America">Latin America</button>
+                    <button class="region-btn" onclick="filterMembers(this)" data-region="Europe">Europe</button>
+                    <button class="region-btn" onclick="filterMembers(this)" data-region="Global">Global</button>
+                </div>
+            </div>
+
+            <p class="members-no-results" id="noResults" style="display:none;">No members match your search.</p>
+
             <div class="member-simple-list">
 
-                <!-- ── KenSAP ── -->
+                <!-- KenSAP -->
                 <article class="member-simple-card reveal">
-
                     <div class="member-card-top">
                         <div class="member-profile-logo">
                             <img src="member1.png" alt="KenSAP">
@@ -83,94 +83,102 @@
                         </div>
                     </div>
 
-                    <div class="member-info-grid">
-                        <div class="mig-block mig-full">
-                            <p class="mig-label">About</p>
-                            <p class="mig-text">KenSAP provides access to world-class higher education for gifted, needy Kenyan high school graduates who would otherwise have no chance to pursue such an opportunity. Most of KenSAP students come from simple, rural backgrounds that would be utterly unrecognizable to their North American classmates, and many are from families that even by Kenyan standards count as disadvantaged.</p>
-                        </div>
-                        <div class="mig-block">
-                            <p class="mig-label">Selection &amp; Support</p>
-                            <p class="mig-text">KenSAP selects its students — 15 to 20 each year — through a lengthy, rigorous process that considers their academic attainments, family background, extra-curricular accomplishments and other personal qualities. The selected students then take part in 15 weeks of residential training consisting mainly of preparation for the American SAT exams and guidance through the complex university application process. The training also includes a general orientation to American culture and the unfamiliar academic conventions of American universities.</p>
-                        </div>
-                    </div>
+                    <button class="member-accordion-btn" onclick="toggleMember(this)">
+                        <span>Learn more +</span>
+                        <span class="member-accordion-icon">+</span>
+                    </button>
 
-                    <div class="member-placements">
-                        <div class="placements-header">
-                            <p class="placements-label">University Placements</p>
-                            <div class="uni-nav-btns">
-                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
-                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                    <div class="member-accordion-body">
+                        <div style="padding-top: 20px;">
+                            <div class="member-info-grid">
+                                <div class="mig-block mig-full">
+                                    <p class="mig-label">About</p>
+                                    <p class="mig-text">KenSAP provides access to world-class higher education for gifted, needy Kenyan high school graduates who would otherwise have no chance to pursue such an opportunity. Most of KenSAP students come from simple, rural backgrounds that would be utterly unrecognizable to their North American classmates, and many are from families that even by Kenyan standards count as disadvantaged.</p>
+                                </div>
+                                <div class="mig-block">
+                                    <p class="mig-label">Selection &amp; Support</p>
+                                    <p class="mig-text">KenSAP selects its students — 15 to 20 each year — through a lengthy, rigorous process that considers their academic attainments, family background, extra-curricular accomplishments and other personal qualities. The selected students then take part in 15 weeks of residential training consisting mainly of preparation for the American SAT exams and guidance through the complex university application process. The training also includes a general orientation to American culture and the unfamiliar academic conventions of American universities.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="uni-track-wrap">
-                            <div class="uni-track">
-                                <div class="uni-logo-item" title="Amherst College"><img src="amherst.png" alt="Amherst College"></div>
-                                <div class="uni-logo-item" title="Barnard College"><img src="barnard.png" alt="Barnard College"></div>
-                                <div class="uni-logo-item" title="Bates College"><img src="bates.png" alt="Bates College"></div>
-                                <div class="uni-logo-item" title="Bowdoin College"><img src="bowdoin.png" alt="Bowdoin College"></div>
-                                <div class="uni-logo-item" title="Brandeis University"><img src="brandeis.png" alt="Brandeis University"></div>
-                                <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
-                                <div class="uni-logo-item" title="Bryn Mawr College"><img src="brynmawr.png" alt="Bryn Mawr College"></div>
-                                <div class="uni-logo-item" title="Carleton College"><img src="carleton.png" alt="Carleton College"></div>
-                                <div class="uni-logo-item" title="Claremont McKenna College"><img src="cmc.png" alt="Claremont McKenna College"></div>
-                                <div class="uni-logo-item" title="Colby College"><img src="colby.png" alt="Colby College"></div>
-                                <div class="uni-logo-item" title="Columbia University"><img src="columbia.png" alt="Columbia University"></div>
-                                <div class="uni-logo-item" title="Connecticut College"><img src="connecticut.png" alt="Connecticut College"></div>
-                                <div class="uni-logo-item" title="Cornell University"><img src="cornell.png" alt="Cornell University"></div>
-                                <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
-                                <div class="uni-logo-item" title="Davidson College"><img src="davidson.png" alt="Davidson College"></div>
-                                <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
-                                <div class="uni-logo-item" title="Gettysburg College"><img src="gettysburg.png" alt="Gettysburg College"></div>
-                                <div class="uni-logo-item" title="Hamilton College"><img src="hamilton.png" alt="Hamilton College"></div>
-                                <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
-                                <div class="uni-logo-item" title="Haverford College"><img src="haverford.png" alt="Haverford College"></div>
-                                <div class="uni-logo-item" title="Johns Hopkins University"><img src="jhu.png" alt="Johns Hopkins University"></div>
-                                <div class="uni-logo-item" title="Kenyon College"><img src="kenyon.png" alt="Kenyon College"></div>
-                                <div class="uni-logo-item" title="Lehigh University"><img src="lehigh.png" alt="Lehigh University"></div>
-                                <div class="uni-logo-item" title="McGill University"><img src="mcgill.png" alt="McGill University"></div>
-                                <div class="uni-logo-item" title="Middlebury College"><img src="middlebury.png" alt="Middlebury College"></div>
-                                <div class="uni-logo-item" title="MIT"><img src="mit.png" alt="MIT"></div>
-                                <div class="uni-logo-item" title="Mount Holyoke College"><img src="mountholyoke.png" alt="Mount Holyoke College"></div>
-                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
-                                <div class="uni-logo-item" title="NYU"><img src="nyu.png" alt="NYU"></div>
-                                <div class="uni-logo-item" title="Oberlin College"><img src="oberlin.png" alt="Oberlin College"></div>
-                                <div class="uni-logo-item" title="Pomona College"><img src="pomona.png" alt="Pomona College"></div>
-                                <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
-                                <div class="uni-logo-item" title="Rice University"><img src="rice.png" alt="Rice University"></div>
-                                <div class="uni-logo-item" title="Smith College"><img src="smith.png" alt="Smith College"></div>
-                                <div class="uni-logo-item" title="Stanford University"><img src="stanford.png" alt="Stanford University"></div>
-                                <div class="uni-logo-item" title="Swarthmore College"><img src="swarthmore.png" alt="Swarthmore College"></div>
-                                <div class="uni-logo-item" title="Tufts University"><img src="tufts.png" alt="Tufts University"></div>
-                                <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
-                                <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
-                                <div class="uni-logo-item" title="University of Toronto"><img src="utoronto.png" alt="University of Toronto"></div>
-                                <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
-                                <div class="uni-logo-item" title="Vassar College"><img src="vassar.png" alt="Vassar College"></div>
-                                <div class="uni-logo-item" title="Wellesley College"><img src="wellesley.png" alt="Wellesley College"></div>
-                                <div class="uni-logo-item" title="Wesleyan University"><img src="wesleyan.png" alt="Wesleyan University"></div>
-                                <div class="uni-logo-item" title="Williams College"><img src="williams.png" alt="Williams College"></div>
-                                <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="member-contact">
-                        <div class="member-contact-links">
-                            <a href="https://www.kensap.org" target="_blank" rel="noreferrer" class="member-contact-item">
-                                <img src="website.png" alt="Website" class="contact-icon">
-                                <span>kensap.org</span>
-                            </a>
-                            <a href="mailto:alan@kensap.org" class="member-contact-item">
-                                <img src="email.png" alt="Email" class="contact-icon">
-                                <span>alan@kensap.org</span>
-                            </a>
+                            <div class="member-placements">
+                                <div class="placements-header">
+                                    <p class="placements-label">University Placements</p>
+                                    <div class="uni-nav-btns">
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,1)" aria-label="Next">&#8594;</button>
+                                    </div>
+                                </div>
+                                <div class="uni-track-wrap">
+                                    <div class="uni-track">
+                                        <div class="uni-logo-item" title="Amherst College"><img src="amherst.png" alt="Amherst College"></div>
+                                        <div class="uni-logo-item" title="Barnard College"><img src="barnard.png" alt="Barnard College"></div>
+                                        <div class="uni-logo-item" title="Bates College"><img src="bates.png" alt="Bates College"></div>
+                                        <div class="uni-logo-item" title="Bowdoin College"><img src="bowdoin.png" alt="Bowdoin College"></div>
+                                        <div class="uni-logo-item" title="Brandeis University"><img src="brandeis.png" alt="Brandeis University"></div>
+                                        <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
+                                        <div class="uni-logo-item" title="Bryn Mawr College"><img src="brynmawr.png" alt="Bryn Mawr College"></div>
+                                        <div class="uni-logo-item" title="Carleton College"><img src="carleton.png" alt="Carleton College"></div>
+                                        <div class="uni-logo-item" title="Claremont McKenna College"><img src="cmc.png" alt="Claremont McKenna College"></div>
+                                        <div class="uni-logo-item" title="Colby College"><img src="colby.png" alt="Colby College"></div>
+                                        <div class="uni-logo-item" title="Columbia University"><img src="columbia.png" alt="Columbia University"></div>
+                                        <div class="uni-logo-item" title="Connecticut College"><img src="connecticut.png" alt="Connecticut College"></div>
+                                        <div class="uni-logo-item" title="Cornell University"><img src="cornell.png" alt="Cornell University"></div>
+                                        <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                        <div class="uni-logo-item" title="Davidson College"><img src="davidson.png" alt="Davidson College"></div>
+                                        <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
+                                        <div class="uni-logo-item" title="Gettysburg College"><img src="gettysburg.png" alt="Gettysburg College"></div>
+                                        <div class="uni-logo-item" title="Hamilton College"><img src="hamilton.png" alt="Hamilton College"></div>
+                                        <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
+                                        <div class="uni-logo-item" title="Haverford College"><img src="haverford.png" alt="Haverford College"></div>
+                                        <div class="uni-logo-item" title="Johns Hopkins University"><img src="jhu.png" alt="Johns Hopkins University"></div>
+                                        <div class="uni-logo-item" title="Kenyon College"><img src="kenyon.png" alt="Kenyon College"></div>
+                                        <div class="uni-logo-item" title="Lehigh University"><img src="lehigh.png" alt="Lehigh University"></div>
+                                        <div class="uni-logo-item" title="McGill University"><img src="mcgill.png" alt="McGill University"></div>
+                                        <div class="uni-logo-item" title="Middlebury College"><img src="middlebury.png" alt="Middlebury College"></div>
+                                        <div class="uni-logo-item" title="MIT"><img src="mit.png" alt="MIT"></div>
+                                        <div class="uni-logo-item" title="Mount Holyoke College"><img src="mountholyoke.png" alt="Mount Holyoke College"></div>
+                                        <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                        <div class="uni-logo-item" title="NYU"><img src="nyu.png" alt="NYU"></div>
+                                        <div class="uni-logo-item" title="Oberlin College"><img src="oberlin.png" alt="Oberlin College"></div>
+                                        <div class="uni-logo-item" title="Pomona College"><img src="pomona.png" alt="Pomona College"></div>
+                                        <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
+                                        <div class="uni-logo-item" title="Rice University"><img src="rice.png" alt="Rice University"></div>
+                                        <div class="uni-logo-item" title="Smith College"><img src="smith.png" alt="Smith College"></div>
+                                        <div class="uni-logo-item" title="Stanford University"><img src="stanford.png" alt="Stanford University"></div>
+                                        <div class="uni-logo-item" title="Swarthmore College"><img src="swarthmore.png" alt="Swarthmore College"></div>
+                                        <div class="uni-logo-item" title="Tufts University"><img src="tufts.png" alt="Tufts University"></div>
+                                        <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
+                                        <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
+                                        <div class="uni-logo-item" title="University of Toronto"><img src="utoronto.png" alt="University of Toronto"></div>
+                                        <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
+                                        <div class="uni-logo-item" title="Vassar College"><img src="vassar.png" alt="Vassar College"></div>
+                                        <div class="uni-logo-item" title="Wellesley College"><img src="wellesley.png" alt="Wellesley College"></div>
+                                        <div class="uni-logo-item" title="Wesleyan University"><img src="wesleyan.png" alt="Wesleyan University"></div>
+                                        <div class="uni-logo-item" title="Williams College"><img src="williams.png" alt="Williams College"></div>
+                                        <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member-contact">
+                                <div class="member-contact-links">
+                                    <a href="https://www.kensap.org" target="_blank" rel="noreferrer" class="member-contact-item">
+                                        <img src="website.png" alt="Website" class="contact-icon">
+                                        <span>kensap.org</span>
+                                    </a>
+                                    <a href="mailto:alan@kensap.org" class="member-contact-item">
+                                        <img src="email.png" alt="Email" class="contact-icon">
+                                        <span>alan@kensap.org</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- ── Beca Cometa ── -->
+                <!-- Beca Cometa -->
                 <article class="member-simple-card reveal">
-
                     <div class="member-card-top">
                         <div class="member-profile-logo">
                             <img src="member2.png" alt="Beca Cometa">
@@ -187,7 +195,7 @@
                             <span class="msb-lbl">Scholars</span>
                         </div>
                         <div class="member-stat-block">
-                            <span class="msb-num">65++</span>
+                            <span class="msb-num">65+</span>
                             <span class="msb-lbl">Scholars in Undergrad</span>
                         </div>
                         <div class="member-stat-block">
@@ -196,66 +204,74 @@
                         </div>
                     </div>
 
-                    <div class="member-info-grid">
-                        <div class="mig-block mig-full">
-                            <p class="mig-label">About</p>
-                            <p class="mig-text">Beca Cometa is an initiative by the Intercorp Group that aims to expand access to high-quality higher education for talented Peruvian students from low-income backgrounds. The program focuses on supporting students with strong academic performance and leadership potential, helping them pursue undergraduate studies in the United States. By investing in education, Beca Cometa seeks to contribute to the long-term development of Peru and improve opportunities for future generations.</p>
-                        </div>
-                        <div class="mig-block">
-                            <p class="mig-label">Selection &amp; Support</p>
-                            <p class="mig-text">Beca Cometa follows a highly selective, multi-stage admissions process that evaluates applicants based on academic achievement, English proficiency, socioeconomic background, and personal competencies. The process includes psychological, socioeconomic, and academic evaluations across five elimination phases. Around 60 students are selected for Beca Cometa Camp, an intensive preparation program that provides SAT training, English certification support, college application guidance, essay advising, and emotional counseling. Successful participants may then receive the full Beca Cometa, which funds tuition, living expenses, travel, and other essential costs for undergraduate studies in the U.S.</p>
-                        </div>
-                    </div>
+                    <button class="member-accordion-btn" onclick="toggleMember(this)">
+                        <span>Learn more +</span>
+                        <span class="member-accordion-icon">+</span>
+                    </button>
 
-                    <div class="member-placements">
-                        <div class="placements-header">
-                            <p class="placements-label">University Placements</p>
-                            <div class="uni-nav-btns">
-                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
-                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                    <div class="member-accordion-body">
+                        <div style="padding-top: 20px;">
+                            <div class="member-info-grid">
+                                <div class="mig-block mig-full">
+                                    <p class="mig-label">About</p>
+                                    <p class="mig-text">Beca Cometa is an initiative by the Intercorp Group that aims to expand access to high-quality higher education for talented Peruvian students from low-income backgrounds. The program focuses on supporting students with strong academic performance and leadership potential, helping them pursue undergraduate studies in the United States. By investing in education, Beca Cometa seeks to contribute to the long-term development of Peru and improve opportunities for future generations.</p>
+                                </div>
+                                <div class="mig-block">
+                                    <p class="mig-label">Selection &amp; Support</p>
+                                    <p class="mig-text">Beca Cometa follows a highly selective, multi-stage admissions process that evaluates applicants based on academic achievement, English proficiency, socioeconomic background, and personal competencies. The process includes psychological, socioeconomic, and academic evaluations across five elimination phases. Around 60 students are selected for Beca Cometa Camp, an intensive preparation program that provides SAT training, English certification support, college application guidance, essay advising, and emotional counseling. Successful participants may then receive the full Beca Cometa, which funds tuition, living expenses, travel, and other essential costs for undergraduate studies in the U.S.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="uni-track-wrap">
-                            <div class="uni-track">
-                                <div class="uni-logo-item" title="Arizona State University"><img src="asu.png" alt="Arizona State University"></div>
-                                <div class="uni-logo-item" title="Bowdoin College"><img src="bowdoin.png" alt="Bowdoin College"></div>
-                                <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
-                                <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
-                                <div class="uni-logo-item" title="Davidson College"><img src="davidson.png" alt="Davidson College"></div>
-                                <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
-                                <div class="uni-logo-item" title="MIT"><img src="mit.png" alt="MIT"></div>
-                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
-                                <div class="uni-logo-item" title="NYU"><img src="nyu.png" alt="NYU"></div>
-                                <div class="uni-logo-item" title="Pomona College"><img src="pomona.png" alt="Pomona College"></div>
-                                <div class="uni-logo-item" title="Stanford University"><img src="stanford.png" alt="Stanford University"></div>
-                                <div class="uni-logo-item" title="UC Berkeley"><img src="berkeley.png" alt="UC Berkeley"></div>
-                                <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
-                                <div class="uni-logo-item" title="University of Notre Dame"><img src="notredame.png" alt="University of Notre Dame"></div>
-                                <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
-                                <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
-                                <div class="uni-logo-item" title="Williams College"><img src="williams.png" alt="Williams College"></div>
-                                <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="member-contact">
-                        <div class="member-contact-links">
-                            <a href="https://www.becacometa.com/" target="_blank" rel="noreferrer" class="member-contact-item">
-                                <img src="website.png" alt="Website" class="contact-icon">
-                                <span>becacometa.com</span>
-                            </a>
-                            <a href="mailto:becas@somoscometa.com" class="member-contact-item">
-                                <img src="email.png" alt="Email" class="contact-icon">
-                                <span>becas@somoscometa.com</span>
-                            </a>
+                            <div class="member-placements">
+                                <div class="placements-header">
+                                    <p class="placements-label">University Placements</p>
+                                    <div class="uni-nav-btns">
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,1)" aria-label="Next">&#8594;</button>
+                                    </div>
+                                </div>
+                                <div class="uni-track-wrap">
+                                    <div class="uni-track">
+                                        <div class="uni-logo-item" title="Arizona State University"><img src="asu.png" alt="Arizona State University"></div>
+                                        <div class="uni-logo-item" title="Bowdoin College"><img src="bowdoin.png" alt="Bowdoin College"></div>
+                                        <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
+                                        <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                        <div class="uni-logo-item" title="Davidson College"><img src="davidson.png" alt="Davidson College"></div>
+                                        <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
+                                        <div class="uni-logo-item" title="MIT"><img src="mit.png" alt="MIT"></div>
+                                        <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                        <div class="uni-logo-item" title="NYU"><img src="nyu.png" alt="NYU"></div>
+                                        <div class="uni-logo-item" title="Pomona College"><img src="pomona.png" alt="Pomona College"></div>
+                                        <div class="uni-logo-item" title="Stanford University"><img src="stanford.png" alt="Stanford University"></div>
+                                        <div class="uni-logo-item" title="UC Berkeley"><img src="berkeley.png" alt="UC Berkeley"></div>
+                                        <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
+                                        <div class="uni-logo-item" title="University of Notre Dame"><img src="notredame.png" alt="University of Notre Dame"></div>
+                                        <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
+                                        <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
+                                        <div class="uni-logo-item" title="Williams College"><img src="williams.png" alt="Williams College"></div>
+                                        <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member-contact">
+                                <div class="member-contact-links">
+                                    <a href="https://www.becacometa.com/" target="_blank" rel="noreferrer" class="member-contact-item">
+                                        <img src="website.png" alt="Website" class="contact-icon">
+                                        <span>becacometa.com</span>
+                                    </a>
+                                    <a href="mailto:becas@somoscometa.com" class="member-contact-item">
+                                        <img src="email.png" alt="Email" class="contact-icon">
+                                        <span>becas@somoscometa.com</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- ── Duolingo UAP ── -->
+                <!-- Duolingo UAP -->
                 <article class="member-simple-card reveal">
-
                     <div class="member-card-top">
                         <div class="member-profile-logo">
                             <img src="member3.png" alt="Duolingo University Access Program">
@@ -277,64 +293,72 @@
                         </div>
                     </div>
 
-                    <div class="member-info-grid">
-                        <div class="mig-block mig-full">
-                            <p class="mig-label">About</p>
-                            <p class="mig-text">The Duolingo University Access (DUA) Program, created in partnership with Duolingo and UNHCR, aims to expand access to higher education for refugee students worldwide. The program addresses the global gap in educational access, where only a small percentage of refugees are able to attend university, by providing structured pathways to top institutions. Through its efforts, DUA supports the broader goal of increasing refugee enrollment in higher education and creating more equitable academic opportunities across countries.</p>
-                        </div>
-                        <div class="mig-block">
-                            <p class="mig-label">Selection &amp; Support</p>
-                            <p class="mig-text">The program identifies high-potential refugee students and provides individualized, comprehensive support throughout the entire university application journey. This includes one-on-one advising, assistance with financial aid applications, English testing through the Duolingo English Test, and guidance through complex immigration and visa processes. Students benefit from a "wrap-around" support model, which also includes interview preparation, transition support, and funding assistance when needed. The program works closely with UNHCR offices and operates in multiple regions, supporting students who go on to enroll in universities across the United States, Canada, and other countries.</p>
-                        </div>
-                    </div>
+                    <button class="member-accordion-btn" onclick="toggleMember(this)">
+                        <span>Learn more +</span>
+                        <span class="member-accordion-icon">+</span>
+                    </button>
 
-                    <div class="member-placements">
-                        <div class="placements-header">
-                            <p class="placements-label">University Placements</p>
-                            <div class="uni-nav-btns">
-                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
-                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                    <div class="member-accordion-body">
+                        <div style="padding-top: 20px;">
+                            <div class="member-info-grid">
+                                <div class="mig-block mig-full">
+                                    <p class="mig-label">About</p>
+                                    <p class="mig-text">The Duolingo University Access (DUA) Program, created in partnership with Duolingo and UNHCR, aims to expand access to higher education for refugee students worldwide. The program addresses the global gap in educational access, where only a small percentage of refugees are able to attend university, by providing structured pathways to top institutions. Through its efforts, DUA supports the broader goal of increasing refugee enrollment in higher education and creating more equitable academic opportunities across countries.</p>
+                                </div>
+                                <div class="mig-block">
+                                    <p class="mig-label">Selection &amp; Support</p>
+                                    <p class="mig-text">The program identifies high-potential refugee students and provides individualized, comprehensive support throughout the entire university application journey. This includes one-on-one advising, assistance with financial aid applications, English testing through the Duolingo English Test, and guidance through complex immigration and visa processes. Students benefit from a "wrap-around" support model, which also includes interview preparation, transition support, and funding assistance when needed. The program works closely with UNHCR offices and operates in multiple regions, supporting students who go on to enroll in universities across the United States, Canada, and other countries.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="uni-track-wrap">
-                            <div class="uni-track">
-                                <div class="uni-logo-item" title="Bennington College"><img src="bennington.jpeg" alt="Bennington College"></div>
-                                <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
-                                <div class="uni-logo-item" title="Drexel University"><img src="drexel.png" alt="Drexel University"></div>
-                                <div class="uni-logo-item" title="Emory University"><img src="emory.png" alt="Emory University"></div>
-                                <div class="uni-logo-item" title="Georgetown University"><img src="georgetown.png" alt="Georgetown University"></div>
-                                <div class="uni-logo-item" title="Macalester College"><img src="macalester.png" alt="Macalester College"></div>
-                                <div class="uni-logo-item" title="Northeastern University"><img src="northeastern.png" alt="Northeastern University"></div>
-                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
-                                <div class="uni-logo-item" title="University of British Columbia"><img src="ubc.png" alt="University of British Columbia"></div>
-                                <div class="uni-logo-item" title="UC Berkeley"><img src="berkeley.png" alt="UC Berkeley"></div>
-                                <div class="uni-logo-item" title="University of Camberra"><img src="uoc.png" alt="University of Camberra"></div>
-                                <div class="uni-logo-item" title="University of Johannesburg"><img src="uoj.png" alt="University of Johannesburg"></div>
-                                <div class="uni-logo-item" title="University of the People"><img src="uop.png" alt="University of the People"></div>
-                                <div class="uni-logo-item" title="University of Western Cape"><img src="uwc.png" alt="University of Western Cape"></div>
-                                <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
-                                <div class="uni-logo-item" title="Wilfrid Laurier University"><img src="wlu.png" alt="Wilfrid Laurier University"></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="member-contact">
-                        <div class="member-contact-links">
-                            <a href="https://englishtest.duolingo.com/institutions/access?ref=blog.englishtest.duolingo.com" target="_blank" rel="noreferrer" class="member-contact-item">
-                                <img src="website.png" alt="Website" class="contact-icon">
-                                <span>englishtest.duolingo.com</span>
-                            </a>
-                            <a href="mailto:laura.kaub@duolingo.com" class="member-contact-item">
-                                <img src="email.png" alt="Email" class="contact-icon">
-                                <span>laura.kaub@duolingo.com</span>
-                            </a>
+                            <div class="member-placements">
+                                <div class="placements-header">
+                                    <p class="placements-label">University Placements</p>
+                                    <div class="uni-nav-btns">
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,1)" aria-label="Next">&#8594;</button>
+                                    </div>
+                                </div>
+                                <div class="uni-track-wrap">
+                                    <div class="uni-track">
+                                        <div class="uni-logo-item" title="Bennington College"><img src="bennington.jpeg" alt="Bennington College"></div>
+                                        <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                        <div class="uni-logo-item" title="Drexel University"><img src="drexel.png" alt="Drexel University"></div>
+                                        <div class="uni-logo-item" title="Emory University"><img src="emory.png" alt="Emory University"></div>
+                                        <div class="uni-logo-item" title="Georgetown University"><img src="georgetown.png" alt="Georgetown University"></div>
+                                        <div class="uni-logo-item" title="Macalester College"><img src="macalester.png" alt="Macalester College"></div>
+                                        <div class="uni-logo-item" title="Northeastern University"><img src="northeastern.png" alt="Northeastern University"></div>
+                                        <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                        <div class="uni-logo-item" title="University of British Columbia"><img src="ubc.png" alt="University of British Columbia"></div>
+                                        <div class="uni-logo-item" title="UC Berkeley"><img src="berkeley.png" alt="UC Berkeley"></div>
+                                        <div class="uni-logo-item" title="University of Camberra"><img src="uoc.png" alt="University of Camberra"></div>
+                                        <div class="uni-logo-item" title="University of Johannesburg"><img src="uoj.png" alt="University of Johannesburg"></div>
+                                        <div class="uni-logo-item" title="University of the People"><img src="uop.png" alt="University of the People"></div>
+                                        <div class="uni-logo-item" title="University of Western Cape"><img src="uwc.png" alt="University of Western Cape"></div>
+                                        <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
+                                        <div class="uni-logo-item" title="Wilfrid Laurier University"><img src="wlu.png" alt="Wilfrid Laurier University"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member-contact">
+                                <div class="member-contact-links">
+                                    <a href="https://englishtest.duolingo.com/institutions/access?ref=blog.englishtest.duolingo.com" target="_blank" rel="noreferrer" class="member-contact-item">
+                                        <img src="website.png" alt="Website" class="contact-icon">
+                                        <span>englishtest.duolingo.com</span>
+                                    </a>
+                                    <a href="mailto:laura.kaub@duolingo.com" class="member-contact-item">
+                                        <img src="email.png" alt="Email" class="contact-icon">
+                                        <span>laura.kaub@duolingo.com</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- ── UGS ── -->
+                <!-- UGS -->
                 <article class="member-simple-card reveal">
-
                     <div class="member-card-top">
                         <div class="member-profile-logo">
                             <img src="member4.png" alt="Ukraine Global Scholars Foundation">
@@ -360,61 +384,69 @@
                         </div>
                     </div>
 
-                    <div class="member-info-grid">
-                        <div class="mig-block mig-full">
-                            <p class="mig-label">About</p>
-                            <p class="mig-text">Ukraine Global Scholars (UGS) is a 501(c)(3) public charity founded in 2015 that has helped 350+ Ukrainian high school students from modest backgrounds receive $100+ million in scholarships to top global boarding schools and universities. In exchange, students commit to return to Ukraine for at least five years. UGS aims to develop a new generation of Ukrainian leaders capable of creating a victorious and prosperous future in Ukraine. Through mentorship, education, career guidance, and empowerment for, UGS seeks to scale its impact and generate a ripple effect of positive impact on the country.</p>
-                        </div>
-                        <div class="mig-block">
-                            <p class="mig-label">Selection &amp; Support</p>
-                            <p class="mig-text">UGS selects Ukraine students through a rigorous four-stage process: application review, English and Math assessments, interviews, and financial background verification. Students receive individualized admissions support, including school selection guidance, essay development, interview preparation, an on-site boot camp in Ukraine, and an online SAT boot camp led by alumni. Each participant is matched with dedicated mentors who provide personalized guidance. UGS also helps students secure full financial aid, covers application-related costs when needed, and offers Last Mile and Emergency Funds for expenses such as flights, visas, and unexpected family needs. Additional support includes mental health resources, host family connections, career opportunities, seed grants, and long-term alumni engagement.</p>
-                        </div>
-                    </div>
+                    <button class="member-accordion-btn" onclick="toggleMember(this)">
+                        <span>Learn more +</span>
+                        <span class="member-accordion-icon">+</span>
+                    </button>
 
-                    <div class="member-placements">
-                        <div class="placements-header">
-                            <p class="placements-label">University Placements</p>
-                            <div class="uni-nav-btns">
-                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
-                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                    <div class="member-accordion-body">
+                        <div style="padding-top: 20px;">
+                            <div class="member-info-grid">
+                                <div class="mig-block mig-full">
+                                    <p class="mig-label">About</p>
+                                    <p class="mig-text">Ukraine Global Scholars (UGS) is a 501(c)(3) public charity founded in 2015 that has helped 350+ Ukrainian high school students from modest backgrounds receive $100+ million in scholarships to top global boarding schools and universities. In exchange, students commit to return to Ukraine for at least five years. UGS aims to develop a new generation of Ukrainian leaders capable of creating a victorious and prosperous future in Ukraine. Through mentorship, education, career guidance, and empowerment for, UGS seeks to scale its impact and generate a ripple effect of positive impact on the country.</p>
+                                </div>
+                                <div class="mig-block">
+                                    <p class="mig-label">Selection &amp; Support</p>
+                                    <p class="mig-text">UGS selects Ukraine students through a rigorous four-stage process: application review, English and Math assessments, interviews, and financial background verification. Students receive individualized admissions support, including school selection guidance, essay development, interview preparation, an on-site boot camp in Ukraine, and an online SAT boot camp led by alumni. Each participant is matched with dedicated mentors who provide personalized guidance. UGS also helps students secure full financial aid, covers application-related costs when needed, and offers Last Mile and Emergency Funds for expenses such as flights, visas, and unexpected family needs. Additional support includes mental health resources, host family connections, career opportunities, seed grants, and long-term alumni engagement.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="uni-track-wrap">
-                            <div class="uni-track">
-                                <div class="uni-logo-item" title="Amherst College"><img src="amherst.png" alt="Amherst College"></div>
-                                <div class="uni-logo-item" title="Babson College"><img src="babson.png" alt="Babson College"></div>
-                                <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
-                                <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
-                                <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
-                                <div class="uni-logo-item" title="MIT"><img src="mit.png" alt="MIT"></div>
-                                <div class="uni-logo-item" title="Minerva University"><img src="minerva.png" alt="Minerva University"></div>
-                                <div class="uni-logo-item" title="NYU AD"><img src="nyuad.png" alt="NYU AD"></div>
-                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
-                                <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
-                                <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
-                                <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
-                                <div class="uni-logo-item" title="Vassar College"><img src="vassar.png" alt="Vassar College"></div>                           
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="member-contact">
-                        <div class="member-contact-links">
-                            <a href="https://www.ugs.foundation/" target="_blank" rel="noreferrer" class="member-contact-item">
-                                <img src="website.png" alt="Website" class="contact-icon">
-                                <span>ugs.foundation</span>
-                            </a>
-                            <a href="mailto:info@ugs.foundation" class="member-contact-item">
-                                <img src="email.png" alt="Email" class="contact-icon">
-                                <span>info@ugs.foundation</span>
-                            </a>
+                            <div class="member-placements">
+                                <div class="placements-header">
+                                    <p class="placements-label">University Placements</p>
+                                    <div class="uni-nav-btns">
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,1)" aria-label="Next">&#8594;</button>
+                                    </div>
+                                </div>
+                                <div class="uni-track-wrap">
+                                    <div class="uni-track">
+                                        <div class="uni-logo-item" title="Amherst College"><img src="amherst.png" alt="Amherst College"></div>
+                                        <div class="uni-logo-item" title="Babson College"><img src="babson.png" alt="Babson College"></div>
+                                        <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
+                                        <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                        <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
+                                        <div class="uni-logo-item" title="MIT"><img src="mit.png" alt="MIT"></div>
+                                        <div class="uni-logo-item" title="Minerva University"><img src="minerva.png" alt="Minerva University"></div>
+                                        <div class="uni-logo-item" title="NYU AD"><img src="nyuad.png" alt="NYU AD"></div>
+                                        <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                        <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
+                                        <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
+                                        <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
+                                        <div class="uni-logo-item" title="Vassar College"><img src="vassar.png" alt="Vassar College"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member-contact">
+                                <div class="member-contact-links">
+                                    <a href="https://www.ugs.foundation/" target="_blank" rel="noreferrer" class="member-contact-item">
+                                        <img src="website.png" alt="Website" class="contact-icon">
+                                        <span>ugs.foundation</span>
+                                    </a>
+                                    <a href="mailto:info@ugs.foundation" class="member-contact-item">
+                                        <img src="email.png" alt="Email" class="contact-icon">
+                                        <span>info@ugs.foundation</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- ── AAI ── -->
+                <!-- AAI -->
                 <article class="member-simple-card reveal">
-
                     <div class="member-card-top">
                         <div class="member-profile-logo">
                             <img src="member5.png" alt="Ashinaga Africa Initiative">
@@ -440,62 +472,70 @@
                         </div>
                     </div>
 
-                    <div class="member-info-grid">
-                        <div class="mig-block mig-full">
-                            <p class="mig-label">About</p>
-                            <p class="mig-text">Founded in 2014, the Ashinaga Africa Initiative (AAI) supports high-achieving, low-income students from Sub-Saharan Africa who have lost one or both parents. Our mission focuses on our Scholars’ personal, academic, and professional growth. We help them develop the values of ethical and innovative leadership. We also prepare them to succeed academically at universities in the United States, the United Kingdom, Japan, France and Brazil. Additionally, we encourage them to return to Sub-Saharan Africa and contribute to social change and development in their communities across the continent.</p>
-                        </div>
-                        <div class="mig-block">
-                            <p class="mig-label">Selection &amp; Support</p>
-                            <p class="mig-text">Ashinaga Africa Initiative in the U.S., U.K. and Japan (Anglophone AAI)  partners with high schools in most sub-Saharan countries that identify 3–35 high-achieving, low-income students each year. Beyond selection, the program works closely with partner schools, training teachers to use free online learning resources to strengthen students’ academic foundations. High-potential students in grades 9–11 may receive tutoring and academic enrichment opportunities to help them reach their full potential. Selected scholars complete an intensive Academic Preparation Year with weekly monitoring and receive individualized guidance on university and scholarship applications. When necessary, Ashinaga also provides financial support to help cover costs not fully met by university aid packages.</p>
-                        </div>
-                    </div>
+                    <button class="member-accordion-btn" onclick="toggleMember(this)">
+                        <span>Learn more +</span>
+                        <span class="member-accordion-icon">+</span>
+                    </button>
 
-                    <div class="member-placements">
-                        <div class="placements-header">
-                            <p class="placements-label">University Placements</p>
-                            <div class="uni-nav-btns">
-                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
-                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                    <div class="member-accordion-body">
+                        <div style="padding-top: 20px;">
+                            <div class="member-info-grid">
+                                <div class="mig-block mig-full">
+                                    <p class="mig-label">About</p>
+                                    <p class="mig-text">Founded in 2014, the Ashinaga Africa Initiative (AAI) supports high-achieving, low-income students from Sub-Saharan Africa who have lost one or both parents. Our mission focuses on our Scholars' personal, academic, and professional growth. We help them develop the values of ethical and innovative leadership. We also prepare them to succeed academically at universities in the United States, the United Kingdom, Japan, France and Brazil. Additionally, we encourage them to return to Sub-Saharan Africa and contribute to social change and development in their communities across the continent.</p>
+                                </div>
+                                <div class="mig-block">
+                                    <p class="mig-label">Selection &amp; Support</p>
+                                    <p class="mig-text">Ashinaga Africa Initiative in the U.S., U.K. and Japan (Anglophone AAI) partners with high schools in most sub-Saharan countries that identify 3–35 high-achieving, low-income students each year. Beyond selection, the program works closely with partner schools, training teachers to use free online learning resources to strengthen students' academic foundations. High-potential students in grades 9–11 may receive tutoring and academic enrichment opportunities to help them reach their full potential. Selected scholars complete an intensive Academic Preparation Year with weekly monitoring and receive individualized guidance on university and scholarship applications. When necessary, Ashinaga also provides financial support to help cover costs not fully met by university aid packages.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="uni-track-wrap">
-                            <div class="uni-track">
-                                <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
-                                <div class="uni-logo-item" title="Cornell University"><img src="cornell.png" alt="Cornell University"></div>                                
-                                <div class="uni-logo-item" title="Colgate University"><img src="colgate.png" alt="Colgate University"></div>
-                                <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
-                                <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
-                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
-                                <div class="uni-logo-item" title="University of Miami"><img src="umiami.png" alt="University of Miami"></div>
-                                <div class="uni-logo-item" title="University of Wisconsin-Madison"><img src="uwmadison.png" alt="University of Wisconsin-Madison"></div>
-                                <div class="uni-logo-item" title="University of Rochester"><img src="urochester.png" alt="University of Rochester"></div>
-                                <div class="uni-logo-item" title="York University"><img src="york.png" alt="York University"></div>                           
-                                <div class="uni-logo-item" title="University of Warwick"><img src="warwick.png" alt="University of Warwick"></div>                           
-                                <div class="uni-logo-item" title="University of São Paulo"><img src="usp.png" alt="University of São Paulo"></div>                           
-                                <div class="uni-logo-item" title="Waseda University"><img src="waseda.png" alt="Waseda University"></div>                           
-                                <div class="uni-logo-item" title="University of Tokyo"><img src="utokyo.png" alt="University of Tokyo"></div>                           
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="member-contact">
-                        <div class="member-contact-links">
-                            <a href="https://www.ugs.foundation/" target="_blank" rel="noreferrer" class="member-contact-item">
-                                <img src="website.png" alt="Website" class="contact-icon">
-                                <span>ugs.foundation</span>
-                            </a>
-                            <a href="mailto:info@ugs.foundation" class="member-contact-item">
-                                <img src="email.png" alt="Email" class="contact-icon">
-                                <span>info@ugs.foundation</span>
-                            </a>
+                            <div class="member-placements">
+                                <div class="placements-header">
+                                    <p class="placements-label">University Placements</p>
+                                    <div class="uni-nav-btns">
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,1)" aria-label="Next">&#8594;</button>
+                                    </div>
+                                </div>
+                                <div class="uni-track-wrap">
+                                    <div class="uni-track">
+                                        <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
+                                        <div class="uni-logo-item" title="Cornell University"><img src="cornell.png" alt="Cornell University"></div>
+                                        <div class="uni-logo-item" title="Colgate University"><img src="colgate.png" alt="Colgate University"></div>
+                                        <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
+                                        <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
+                                        <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                        <div class="uni-logo-item" title="University of Miami"><img src="umiami.png" alt="University of Miami"></div>
+                                        <div class="uni-logo-item" title="University of Wisconsin-Madison"><img src="uwmadison.png" alt="University of Wisconsin-Madison"></div>
+                                        <div class="uni-logo-item" title="University of Rochester"><img src="urochester.png" alt="University of Rochester"></div>
+                                        <div class="uni-logo-item" title="York University"><img src="york.png" alt="York University"></div>
+                                        <div class="uni-logo-item" title="University of Warwick"><img src="warwick.png" alt="University of Warwick"></div>
+                                        <div class="uni-logo-item" title="University of São Paulo"><img src="usp.png" alt="University of São Paulo"></div>
+                                        <div class="uni-logo-item" title="Waseda University"><img src="waseda.png" alt="Waseda University"></div>
+                                        <div class="uni-logo-item" title="University of Tokyo"><img src="utokyo.png" alt="University of Tokyo"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member-contact">
+                                <div class="member-contact-links">
+                                    <a href="https://www.ashinaga.org/" target="_blank" rel="noreferrer" class="member-contact-item">
+                                        <img src="website.png" alt="Website" class="contact-icon">
+                                        <span>ashinaga.org</span>
+                                    </a>
+                                    <a href="mailto:info@ugs.foundation" class="member-contact-item">
+                                        <img src="email.png" alt="Email" class="contact-icon">
+                                        <span>info@ugs.foundation</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- ── Fundação Estudar ── -->
+                <!-- Fundação Estudar -->
                 <article class="member-simple-card reveal">
-
                     <div class="member-card-top">
                         <div class="member-profile-logo">
                             <img src="member6.png" alt="Fundação Estudar">
@@ -521,60 +561,66 @@
                         </div>
                     </div>
 
-                    <div class="member-info-grid">
-                        <div class="mig-block mig-full">
-                            <p class="mig-label">About</p>
-                            <p class="mig-text">Founded in 1991, Fundação Estudar creates opportunities for talented young people to maximize their potential and generate positive impact in Brazil. Its flagship initiatives include the Líderes Estudar Fellowship, which supports promising leaders, and the Prep Program, a college access initiative for talented Brazilian students.</p>
-                        </div>
-                        <div class="mig-block">
-                            <p class="mig-label">Selection &amp; Support</p>
-                            <p class="mig-text">Fundação Estudar programs receive approximately 10,000 applications each year. Our application and interview process is conducted entirely in English and is designed to mirror the U.S. college admissions process. It is open for Brazilian students in their final year of high school or first gap year, who submit a written application, and selected candidates are invited to interview. Those admitted receive comprehensive support throughout their university application journey, including college counseling, need-based financial assistance, weekly classes, SAT and English preparation, informational workshops, mentorship, mental health support, and enrichment opportunities. The program also assists students and their high schools with required documentation. In addition, all students apply for the Líderes Estudar Scholarship, which provides support toward the cost of attendance at university.</p>
-                        </div>
-                    </div>
+                    <button class="member-accordion-btn" onclick="toggleMember(this)">
+                        <span>Learn more +</span>
+                        <span class="member-accordion-icon">+</span>
+                    </button>
 
-                    <div class="member-placements">
-                        <div class="placements-header">
-                            <p class="placements-label">University Placements</p>
-                            <div class="uni-nav-btns">
-                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
-                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                    <div class="member-accordion-body">
+                        <div style="padding-top: 20px;">
+                            <div class="member-info-grid">
+                                <div class="mig-block mig-full">
+                                    <p class="mig-label">About</p>
+                                    <p class="mig-text">Founded in 1991, Fundação Estudar creates opportunities for talented young people to maximize their potential and generate positive impact in Brazil. Its flagship initiatives include the Líderes Estudar Fellowship, which supports promising leaders, and the Prep Program, a college access initiative for talented Brazilian students.</p>
+                                </div>
+                                <div class="mig-block">
+                                    <p class="mig-label">Selection &amp; Support</p>
+                                    <p class="mig-text">Fundação Estudar programs receive approximately 10,000 applications each year. Our application and interview process is conducted entirely in English and is designed to mirror the U.S. college admissions process. It is open for Brazilian students in their final year of high school or first gap year, who submit a written application, and selected candidates are invited to interview. Those admitted receive comprehensive support throughout their university application journey, including college counseling, need-based financial assistance, weekly classes, SAT and English preparation, informational workshops, mentorship, mental health support, and enrichment opportunities. The program also assists students and their high schools with required documentation. In addition, all students apply for the Líderes Estudar Scholarship, which provides support toward the cost of attendance at university.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="uni-track-wrap">
-                            <div class="uni-track">
-                                <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
-                                <div class="uni-logo-item" title="Columbia University"><img src="columbia.png" alt="Columbia University"></div>                                
-                                <div class="uni-logo-item" title="Dartmouth Colllege"><img src="dartmouth.png" alt="Dartmouth College"></div>
-                                <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
-                                <div class="uni-logo-item" title="Georgia Institute of Technology"><img src="georgiatech.png" alt="Georgia Institute of Technology"></div>
-                                <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
-                                <div class="uni-logo-item" title="Massachusetts Institute of Technology"><img src="mit.png" alt="Massachusetts Institute of Technology"></div>
-                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
-                                <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
-                                <div class="uni-logo-item" title="Stanford University"><img src="stanford.png" alt="Stanford University"></div>
-                                <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
-                                <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
-                                <div class="uni-logo-item" title="University of Notre Dame"><img src="notredame.png" alt="University of Notre Dame"></div>
-                                <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
-                                <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>                           
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="member-contact">
-                        <div class="member-contact-links">
-                            <a href="https://estudar.org.br/ " target="_blank" rel="noreferrer" class="member-contact-item">
-                                <img src="website.png" alt="Website" class="contact-icon">
-                                <span>estudar.org.br</span>
-                            </a>
-                            
+                            <div class="member-placements">
+                                <div class="placements-header">
+                                    <p class="placements-label">University Placements</p>
+                                    <div class="uni-nav-btns">
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,1)" aria-label="Next">&#8594;</button>
+                                    </div>
+                                </div>
+                                <div class="uni-track-wrap">
+                                    <div class="uni-track">
+                                        <div class="uni-logo-item" title="Brown University"><img src="brown.png" alt="Brown University"></div>
+                                        <div class="uni-logo-item" title="Columbia University"><img src="columbia.png" alt="Columbia University"></div>
+                                        <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                        <div class="uni-logo-item" title="Duke University"><img src="duke.png" alt="Duke University"></div>
+                                        <div class="uni-logo-item" title="Georgia Institute of Technology"><img src="georgiatech.png" alt="Georgia Institute of Technology"></div>
+                                        <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
+                                        <div class="uni-logo-item" title="Massachusetts Institute of Technology"><img src="mit.png" alt="Massachusetts Institute of Technology"></div>
+                                        <div class="uni-logo-item" title="Northwestern University"><img src="northwestern.png" alt="Northwestern University"></div>
+                                        <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
+                                        <div class="uni-logo-item" title="Stanford University"><img src="stanford.png" alt="Stanford University"></div>
+                                        <div class="uni-logo-item" title="University of Chicago"><img src="uchicago.png" alt="University of Chicago"></div>
+                                        <div class="uni-logo-item" title="University of Notre Dame"><img src="notredame.png" alt="University of Notre Dame"></div>
+                                        <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
+                                        <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member-contact">
+                                <div class="member-contact-links">
+                                    <a href="https://estudar.org.br/" target="_blank" rel="noreferrer" class="member-contact-item">
+                                        <img src="website.png" alt="Website" class="contact-icon">
+                                        <span>estudar.org.br</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                 <!-- ── Bridge2Rwanda / Isomo ── -->
+                <!-- Bridge2Rwanda / Isomo -->
                 <article class="member-simple-card reveal">
-
                     <div class="member-card-top">
                         <div class="member-profile-logo">
                             <img src="member7.png" alt="Bridge2Rwanda / Isomo">
@@ -600,54 +646,62 @@
                         </div>
                     </div>
 
-                    <div class="member-info-grid">
-                        <div class="mig-block mig-full">
-                            <p class="mig-label">About</p>
-                            <p class="mig-text">Bridge2Rwanda, since 2011, has been dedicated to creating opportunities for high-capacity leaders across Africa to transform their communities and accelerate their countries’ development. One of its key initiatives, Isomo, is an education innovation lab that addresses challenges in literacy, critical thinking, and university access in Rwanda and across the continent. Through Africa-centered immersive residential bootcamps and structured counseling Isomo uses language acquisition as a vehicle for developing knowledge, skills, and critical thinking. We equip young scholars with the academic skills, ethical grounding, and self-reflection necessary to compete for, excel at, and ultimately return from top-tier global universities to drive Rwanda's socioeconomic growth.</p>
-                        </div>
-                        <div class="mig-block">
-                            <p class="mig-label">Selection &amp; Support</p>
-                            <p class="mig-text">Isomo is open to high-achieving students aged 15–19 in Grade 10, primarily from low-income backgrounds. Applications are open annually from December to April. The program seeks students who demonstrate academic excellence, leadership potential, and a commitment to contributing to Africa’s development. Selected students participate in a three-year program: a two-month residential boot camp after Grade 10, a second two-month residential boot camp after Grade 11, and a gap year program following Grade 12. Alongside intensive English immersion, students receive university counseling, internship opportunities, financial aid advising, and financial support when needed to access higher education and prepare for successful careers.</p>
-                        </div>
-                    </div>
+                    <button class="member-accordion-btn" onclick="toggleMember(this)">
+                        <span>Learn more +</span>
+                        <span class="member-accordion-icon">+</span>
+                    </button>
 
-                    <div class="member-placements">
-                        <div class="placements-header">
-                            <p class="placements-label">University Placements</p>
-                            <div class="uni-nav-btns">
-                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
-                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                    <div class="member-accordion-body">
+                        <div style="padding-top: 20px;">
+                            <div class="member-info-grid">
+                                <div class="mig-block mig-full">
+                                    <p class="mig-label">About</p>
+                                    <p class="mig-text">Bridge2Rwanda, since 2011, has been dedicated to creating opportunities for high-capacity leaders across Africa to transform their communities and accelerate their countries' development. One of its key initiatives, Isomo, is an education innovation lab that addresses challenges in literacy, critical thinking, and university access in Rwanda and across the continent. Through Africa-centered immersive residential bootcamps and structured counseling Isomo uses language acquisition as a vehicle for developing knowledge, skills, and critical thinking. We equip young scholars with the academic skills, ethical grounding, and self-reflection necessary to compete for, excel at, and ultimately return from top-tier global universities to drive Rwanda's socioeconomic growth.</p>
+                                </div>
+                                <div class="mig-block">
+                                    <p class="mig-label">Selection &amp; Support</p>
+                                    <p class="mig-text">Isomo is open to high-achieving students aged 15–19 in Grade 10, primarily from low-income backgrounds. Applications are open annually from December to April. The program seeks students who demonstrate academic excellence, leadership potential, and a commitment to contributing to Africa's development. Selected students participate in a three-year program: a two-month residential boot camp after Grade 10, a second two-month residential boot camp after Grade 11, and a gap year program following Grade 12. Alongside intensive English immersion, students receive university counseling, internship opportunities, financial aid advising, and financial support when needed to access higher education and prepare for successful careers.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="uni-track-wrap">
-                            <div class="uni-track">
-                                <div class="uni-logo-item" title="Abilene Christian University"><img src="abilene.png" alt="Abilene Christian University"></div>
-                                <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
-                                <div class="uni-logo-item" title="Oklahoma Christian University"><img src="okchristian.png" alt="Oklahoma Christian University"></div>
-                                <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
-                                <div class="uni-logo-item" title="University of Rochester"><img src="urochester.png" alt="University of Rochester"></div>
-                                <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>                           
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="member-contact">
-                        <div class="member-contact-links">
-                            <a href="https://www.bridge2rwanda.org/ " target="_blank" rel="noreferrer" class="member-contact-item">
-                                <img src="website.png" alt="Website" class="contact-icon">
-                                <span>bridge2rwanda.org</span>
-                            </a>
-                            <a href="mailto:apply@bridge2rwanda.org" class="member-contact-item">
-                                <img src="email.png" alt="Email" class="contact-icon">
-                                <span>apply@bridge2rwanda.org</span>
-                            </a>
+                            <div class="member-placements">
+                                <div class="placements-header">
+                                    <p class="placements-label">University Placements</p>
+                                    <div class="uni-nav-btns">
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,1)" aria-label="Next">&#8594;</button>
+                                    </div>
+                                </div>
+                                <div class="uni-track-wrap">
+                                    <div class="uni-track">
+                                        <div class="uni-logo-item" title="Abilene Christian University"><img src="abilene.png" alt="Abilene Christian University"></div>
+                                        <div class="uni-logo-item" title="Dartmouth College"><img src="dartmouth.png" alt="Dartmouth College"></div>
+                                        <div class="uni-logo-item" title="Oklahoma Christian University"><img src="okchristian.png" alt="Oklahoma Christian University"></div>
+                                        <div class="uni-logo-item" title="University of Pennsylvania"><img src="upenn.png" alt="University of Pennsylvania"></div>
+                                        <div class="uni-logo-item" title="University of Rochester"><img src="urochester.png" alt="University of Rochester"></div>
+                                        <div class="uni-logo-item" title="Yale University"><img src="yale.png" alt="Yale University"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member-contact">
+                                <div class="member-contact-links">
+                                    <a href="https://www.bridge2rwanda.org/" target="_blank" rel="noreferrer" class="member-contact-item">
+                                        <img src="website.png" alt="Website" class="contact-icon">
+                                        <span>bridge2rwanda.org</span>
+                                    </a>
+                                    <a href="mailto:apply@bridge2rwanda.org" class="member-contact-item">
+                                        <img src="email.png" alt="Email" class="contact-icon">
+                                        <span>apply@bridge2rwanda.org</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- ── ISMART ── -->
+                <!-- ISMART -->
                 <article class="member-simple-card reveal">
-
                     <div class="member-card-top">
                         <div class="member-profile-logo">
                             <img src="member8.png" alt="ISMART">
@@ -673,62 +727,70 @@
                         </div>
                     </div>
 
-                    <div class="member-info-grid">
-                        <div class="mig-block mig-full">
-                            <p class="mig-label">About</p>
-                            <p class="mig-text">Founded in 1999, Ismart seeks to help talented low-income students reach their full professional potential through programs grounded in excellence, ethics, and productive creativity. The organization identifies high-achieving students and supports them from secondary school through college. With an overall acceptance rate of approximately 8%, Ismart provides academic enrichment, mentorship, and financial support to strengthen students’ educational opportunities and help them access successful careers, ultimately contributing to greater social mobility and breaking cycles of poverty.</p>
-                        </div>
-                        <div class="mig-block">
-                            <p class="mig-label">Selection &amp; Support</p>
-                            <p class="mig-text">Ismart has two entry points: students selected in 7th grade join online programs in 8th grade, while those selected in 9th grade enter the program in 10th grade. Eligibility is limited to low-income students, with family income capped at approximately two minimum wages per capita. The selection process includes an initial screening, Portuguese and Math assessments, a socioeconomic evaluation, the Ismart Challenge, family interviews, individual student interviews, and group activities. Students receive academic enrichment, technology and English education, and later career and college counseling. Participants in the in-person program attend top schools with expenses fully covered. Higher Education program participants receive mentorship, networking opportunities, career guidance, and living stipends.</p>
-                        </div>
-                    </div>
+                    <button class="member-accordion-btn" onclick="toggleMember(this)">
+                        <span>Learn more +</span>
+                        <span class="member-accordion-icon">+</span>
+                    </button>
 
-                    <div class="member-placements">
-                        <div class="placements-header">
-                            <p class="placements-label">University Placements</p>
-                            <div class="uni-nav-btns">
-                                <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
-                                <button class="uni-nav-btn" onclick="scrollUni(this,1)"  aria-label="Next">&#8594;</button>
+                    <div class="member-accordion-body">
+                        <div style="padding-top: 20px;">
+                            <div class="member-info-grid">
+                                <div class="mig-block mig-full">
+                                    <p class="mig-label">About</p>
+                                    <p class="mig-text">Founded in 1999, Ismart seeks to help talented low-income students reach their full professional potential through programs grounded in excellence, ethics, and productive creativity. The organization identifies high-achieving students and supports them from secondary school through college. With an overall acceptance rate of approximately 8%, Ismart provides academic enrichment, mentorship, and financial support to strengthen students' educational opportunities and help them access successful careers, ultimately contributing to greater social mobility and breaking cycles of poverty.</p>
+                                </div>
+                                <div class="mig-block">
+                                    <p class="mig-label">Selection &amp; Support</p>
+                                    <p class="mig-text">Ismart has two entry points: students selected in 7th grade join online programs in 8th grade, while those selected in 9th grade enter the program in 10th grade. Eligibility is limited to low-income students, with family income capped at approximately two minimum wages per capita. The selection process includes an initial screening, Portuguese and Math assessments, a socioeconomic evaluation, the Ismart Challenge, family interviews, individual student interviews, and group activities. Students receive academic enrichment, technology and English education, and later career and college counseling. Participants in the in-person program attend top schools with expenses fully covered. Higher Education program participants receive mentorship, networking opportunities, career guidance, and living stipends.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="uni-track-wrap">
-                            <div class="uni-track">
-                                <div class="uni-logo-item" title="Babson College"><img src="babson.png" alt="Babson College"></div>
-                                <div class="uni-logo-item" title="Bocconi University"><img src="bocconi.png" alt="Bocconi University"></div>
-                                <div class="uni-logo-item" title="Carnegie Mellon University"><img src="carnegie.png" alt="Carnegie Mellon University"></div>
-                                <div class="uni-logo-item" title="Claremont McKenna College"><img src="cmc.png" alt="Claremont McKenna College"></div>
-                                <div class="uni-logo-item" title="Clark University"><img src="clark.png" alt="Clark University"></div>
-                                <div class="uni-logo-item" title="Grinnell College"><img src="grinnell.png" alt="Grinnell College"></div>
-                                <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
-                                <div class="uni-logo-item" title="Lake Forest College"><img src="lakeforest.png" alt="Lake Forest College"></div>
-                                <div class="uni-logo-item" title="Minerva University"><img src="minerva.png" alt="Minerva University"></div>
-                                <div class="uni-logo-item" title="New York University Abu Dhabi"><img src="nyuad.png" alt="New York University Abu Dhabi"></div>
-                                <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
-                                <div class="uni-logo-item" title="University College London"><img src="ucl.png" alt="University College London"></div>
-                                <div class="uni-logo-item" title="University of Notre Dame"><img src="notredame.png" alt="University of Notre Dame"></div>
-                                <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="member-contact">
-                        <div class="member-contact-links">
-                            <a href="https://www.ismart.org.br/" target="_blank" rel="noreferrer" class="member-contact-item">
-                                <img src="website.png" alt="Website" class="contact-icon">
-                                <span>ismart.org.br</span>
-                            </a>
-                            <a href="mailto:prepestudarfora@ismart.org.br" class="member-contact-item">
-                                <img src="email.png" alt="Email" class="contact-icon">
-                                <span>prepestudarfora@ismart.org.br</span>
-                            </a>
+                            <div class="member-placements">
+                                <div class="placements-header">
+                                    <p class="placements-label">University Placements</p>
+                                    <div class="uni-nav-btns">
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,-1)" aria-label="Previous">&#8592;</button>
+                                        <button class="uni-nav-btn" onclick="scrollUni(this,1)" aria-label="Next">&#8594;</button>
+                                    </div>
+                                </div>
+                                <div class="uni-track-wrap">
+                                    <div class="uni-track">
+                                        <div class="uni-logo-item" title="Babson College"><img src="babson.png" alt="Babson College"></div>
+                                        <div class="uni-logo-item" title="Bocconi University"><img src="bocconi.png" alt="Bocconi University"></div>
+                                        <div class="uni-logo-item" title="Carnegie Mellon University"><img src="carnegie.png" alt="Carnegie Mellon University"></div>
+                                        <div class="uni-logo-item" title="Claremont McKenna College"><img src="cmc.png" alt="Claremont McKenna College"></div>
+                                        <div class="uni-logo-item" title="Clark University"><img src="clark.png" alt="Clark University"></div>
+                                        <div class="uni-logo-item" title="Grinnell College"><img src="grinnell.png" alt="Grinnell College"></div>
+                                        <div class="uni-logo-item" title="Harvard University"><img src="harvard.png" alt="Harvard University"></div>
+                                        <div class="uni-logo-item" title="Lake Forest College"><img src="lakeforest.png" alt="Lake Forest College"></div>
+                                        <div class="uni-logo-item" title="Minerva University"><img src="minerva.png" alt="Minerva University"></div>
+                                        <div class="uni-logo-item" title="New York University Abu Dhabi"><img src="nyuad.png" alt="New York University Abu Dhabi"></div>
+                                        <div class="uni-logo-item" title="Princeton University"><img src="princeton.png" alt="Princeton University"></div>
+                                        <div class="uni-logo-item" title="University College London"><img src="ucl.png" alt="University College London"></div>
+                                        <div class="uni-logo-item" title="University of Notre Dame"><img src="notredame.png" alt="University of Notre Dame"></div>
+                                        <div class="uni-logo-item" title="Vanderbilt University"><img src="vanderbilt.png" alt="Vanderbilt University"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member-contact">
+                                <div class="member-contact-links">
+                                    <a href="https://www.ismart.org.br/" target="_blank" rel="noreferrer" class="member-contact-item">
+                                        <img src="website.png" alt="Website" class="contact-icon">
+                                        <span>ismart.org.br</span>
+                                    </a>
+                                    <a href="mailto:prepestudarfora@ismart.org.br" class="member-contact-item">
+                                        <img src="email.png" alt="Email" class="contact-icon">
+                                        <span>prepestudarfora@ismart.org.br</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
 
             </div>
         </section>
-
     </main>
 
     <footer>
@@ -737,94 +799,91 @@
                 <img src="logo.png" alt="ICAN Logo">
                 <p>Education access beyond borders: A network of organizations that support global talent seeking higher education opportunities.</p>
             </div>
-
             <div class="footer-contact">
                 <h4>Contact</h4>
                 <p>icanaccessnetwork@gmail.com</p>
             </div>
         </div>
-
         <div class="footer-bottom">
             <p>© 2026 ICAN — International College Access Network. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        
-    // CAROUSEL SCROLL FUNCTION // 
-
-    function scrollUni(btn, dir) {
-        const track = btn.closest('.member-placements').querySelector('.uni-track');
-        const GAP = 10;
-        const ITEM_WIDTH = 72;
-        const step = ITEM_WIDTH + GAP;
-        const visibleCount = Math.floor(track.parentElement.offsetWidth / step);
-        const maxIndex = Math.max(0, track.children.length - visibleCount);
-
-        let currentIndex = parseInt(track.dataset.index || '0');
-        currentIndex = Math.min(Math.max(currentIndex + dir, 0), maxIndex);
-        track.dataset.index = currentIndex;
-
-        track.style.transform = `translateX(-${currentIndex * step}px)`;
-    }
-
-    // ACTIVE NAV LINK DETECTION //
-
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-links a').forEach((link) => {
-        const linkPage = link.getAttribute('href').split('/').pop();
-        if (linkPage === currentPage) {
-            link.parentElement.classList.add('active');
+        // CAROUSEL
+        function scrollUni(btn, dir) {
+            const track = btn.closest('.member-placements').querySelector('.uni-track');
+            const GAP = 10;
+            const ITEM_WIDTH = 72;
+            const step = ITEM_WIDTH + GAP;
+            const visibleCount = Math.floor(track.parentElement.offsetWidth / step);
+            const maxIndex = Math.max(0, track.children.length - visibleCount);
+            let currentIndex = parseInt(track.dataset.index || '0');
+            currentIndex = Math.min(Math.max(currentIndex + dir, 0), maxIndex);
+            track.dataset.index = currentIndex;
+            track.style.transform = `translateX(-${currentIndex * step}px)`;
         }
-    });
 
-    // SCROLL REVEAL //
-
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
+        // ACCORDION
+        function toggleMember(btn) {
+            const card = btn.closest('.member-simple-card');
+            const isOpen = card.classList.contains('open');
+            document.querySelectorAll('.member-simple-card.open').forEach(c => {
+                c.classList.remove('open');
+                c.querySelector('.member-accordion-btn span:first-child').textContent = 'Learn more +';
+            });
+            if (!isOpen) {
+                card.classList.add('open');
+                btn.querySelector('span:first-child').textContent = 'Show less -';
             }
-        });
-    }, { threshold: 0.15 });
-    revealElements.forEach((element) => revealObserver.observe(element));
-
-    // MEMBER FILTER // 
-    
-    let activeRegion = 'all';
-
-    function filterMembers(btn) {
-        // Update active region if a button was clicked
-        if (btn) {
-            activeRegion = btn.dataset.region;
-            document.querySelectorAll('.region-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
         }
 
-        const query = document.getElementById('memberSearch').value.toLowerCase().trim();
-        const cards = document.querySelectorAll('.member-simple-card');
-        let visible = 0;
-
-        cards.forEach(card => {
-            const region = card.querySelector('.member-region-badge')?.textContent.trim() || '';
-            const name = card.querySelector('h3')?.textContent.toLowerCase() || '';
-            const about = card.querySelector('.mig-text')?.textContent.toLowerCase() || '';
-
-            const matchesRegion = activeRegion === 'all' || region === activeRegion;
-            const matchesSearch = !query || name.includes(query) || about.includes(query) || region.toLowerCase().includes(query);
-
-            if (matchesRegion && matchesSearch) {
-                card.style.display = '';
-                visible++;
-            } else {
-                card.style.display = 'none';
+        // ACTIVE NAV
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-links a').forEach((link) => {
+            const linkPage = link.getAttribute('href').split('/').pop();
+            if (linkPage === currentPage) {
+                link.parentElement.classList.add('active');
             }
         });
 
-        document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
-    }
+        // SCROLL REVEAL
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.15 });
+        revealElements.forEach((element) => revealObserver.observe(element));
 
-</script>
+        // MEMBER FILTER
+        let activeRegion = 'all';
+        function filterMembers(btn) {
+            if (btn) {
+                activeRegion = btn.dataset.region;
+                document.querySelectorAll('.region-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            }
+            const query = document.getElementById('memberSearch').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.member-simple-card');
+            let visible = 0;
+            cards.forEach(card => {
+                const region = card.querySelector('.member-region-badge')?.textContent.trim() || '';
+                const name = card.querySelector('h3')?.textContent.toLowerCase() || '';
+                const about = card.querySelector('.mig-text')?.textContent.toLowerCase() || '';
+                const matchesRegion = activeRegion === 'all' || region === activeRegion;
+                const matchesSearch = !query || name.includes(query) || about.includes(query) || region.toLowerCase().includes(query);
+                if (matchesRegion && matchesSearch) {
+                    card.style.display = '';
+                    visible++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
