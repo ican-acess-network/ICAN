@@ -1207,7 +1207,8 @@ footer {
 }
 
 @media (max-width: 640px) {
-    .header { height: 65vh; }
+    .header { height: 65vh; 
+            padding-top: 80px;}
     .header-headline { font-size: 36px; }
     .header-sub { font-size: 17px; }
 
