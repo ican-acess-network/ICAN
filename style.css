@@ -752,6 +752,10 @@ nav {
     line-height: 1.7;
 }
 
+.mig-text + .mig-text {
+    margin-top: 10px;
+}
+
 /* ─── University placements carousel ─── */
 .member-placements {
     margin-bottom: 24px;
