@@ -731,13 +731,13 @@ nav {
 .mig-full {
     grid-column: 1 / -1;
 }
-
+ 
 .mig-block {
     background-color: #f6f4f1;
     border-radius: 12px;
     padding: 18px 20px;
 }
-
+ 
 .mig-label {
     font-size: 16px;
     letter-spacing: 2.5px;
@@ -745,13 +745,13 @@ nav {
     color: #ffd717;
     margin-bottom: 8px;
 }
-
+ 
 .mig-text {
     color: #444;
     font-size: 16px;
     line-height: 1.7;
 }
-
+ 
 .mig-text + .mig-text {
     margin-top: 10px;
 }
